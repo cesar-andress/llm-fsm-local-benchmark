@@ -14,7 +14,7 @@ This policy applies to:
 - User-facing variable names and identifiers
 - README files
 - Documentation (`docs/`)
-- Prompts (`prompts/`)
+- Prompt specifications (`docs/experimental_prompts.md`; local `prompts/` is gitignored)
 - Benchmark and dataset descriptions
 - Requirement specifications (`dataset/systems/`)
 - JSON metadata
@@ -48,7 +48,7 @@ GitHub-facing content must be publication-ready.
 
 ## Priority
 
-This policy takes precedence over convenience, localization, or assistant default language preferences.
+This policy takes precedence over convenience, localization, or non-English default preferences.
 
 ## Related documents
 

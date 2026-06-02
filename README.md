@@ -29,7 +29,8 @@ Compare local models on:
 .
 ├── dataset/              # 20 systems × 12–13 numbered requirements
 ├── benchmark/            # Catalog, gold FSM placeholders
-├── prompts/              # FSM generation prompts and schema
+├── docs/                 # Protocol, prompt specification (see experimental_prompts.md)
+│   └── (local prompts/ created at runtime — gitignored)
 ├── outputs/
 │   ├── raw/              # Full model responses (JSON wrapper)
 │   └── cleaned/          # Parsed FSM JSON
@@ -205,8 +206,8 @@ See `dataset/index.json` for the full catalog and `docs/dataset.md` for schema d
 | `docs/evaluation_protocol.md` | Research questions and metrics |
 | `docs/gold_standard_strategy.md` | Gold FSM methodology |
 | `docs/PROJECT_RULES.md` | Language, repository separation, commits, releases |
-| `docs/language_audit.md` | English-language compliance audit |
-| `AGENTS.md` | Repository agent instructions |
+| `docs/experimental_prompts.md` | Formal FSM generation prompt specification |
+| `docs/REPOSITORY_HYGIENE_POLICY.md` | AI-only artifact exclusion policy |
 | `docs/LANGUAGE_POLICY.md` | English-only policy (summary) |
 | `docs/RESEARCH_REPOSITORY_POLICY.md` | Artifact placement (summary) |
 

@@ -1,5 +1,7 @@
 # Language Audit Report
 
+> **Note:** For repository hygiene (prompt tracking, operational artifacts), see `docs/repository_hygiene_audit.md`. Sections below referencing tracked `prompts/`, `AGENTS.md`, or `.cursor/` describe a prior state superseded on 2026-06-02.
+
 **Date:** 2026-06-02  
 **Repository:** `~/papers/ist2026/llm-fsm-local-benchmark`  
 **Auditor action:** Apply project language and commit policy  

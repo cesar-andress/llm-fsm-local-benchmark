@@ -22,6 +22,22 @@ figures/
 !outputs/cleaned/.gitkeep
 !figures/.gitkeep
 
+# AI-only and local assistant artifacts
+prompts/
+prompt_drafts/
+ai_prompts/
+cursor_rules/
+.cursor/
+chat_logs/
+assistant_logs/
+scratch_prompts/
+local_notes/
+temporary_prompt_tests/
+AGENTS.md
+*.prompt.txt
+*.chat.txt
+*.assistant.txt
+
 # Environment and secrets
 .env
 .env.*

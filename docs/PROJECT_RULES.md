@@ -6,13 +6,10 @@ Related documents:
 
 - `docs/LANGUAGE_POLICY.md` — language scope (summary)
 - `docs/RESEARCH_REPOSITORY_POLICY.md` — artifact placement (summary)
+- `docs/REPOSITORY_HYGIENE_POLICY.md` — AI-only artifact exclusion
 - `REPRODUCIBILITY.md` — replication procedure
 - `docs/language_audit.md` — English compliance audit
-
-IDE integration:
-
-- `.cursor/rules/project-rules.mdc` — Cursor always-on rules
-- `AGENTS.md` — repository-local agent instructions
+- `docs/experimental_prompts.md` — formal prompt specification (version controlled)
 
 ---
 
@@ -104,6 +101,16 @@ This directory may contain:
 **Do not** place raw experimental outputs inside `paper/`.
 
 When uncertain about placement, write a proposal in `docs/` and wait for approval before moving files.
+
+---
+
+## 3.1 Repository hygiene (AI-only artifacts)
+
+Do **not** commit operational or prompt-working directories. See `docs/REPOSITORY_HYGIENE_POLICY.md`.
+
+- Local runtime copies: `prompts/` (gitignored)
+- Version-controlled specification: `docs/experimental_prompts.md`
+- Excluded: `.cursor/`, `AGENTS.md`, chat logs, scratch prompts
 
 ---
 

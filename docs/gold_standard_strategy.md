@@ -236,4 +236,4 @@ Files containing only `{}` are **placeholders**. CI must:
 
 - `docs/evaluation_protocol.md` — research questions and metrics
 - `benchmark/README.md` — benchmark definition
-- `prompts/fsm_system_prompt.txt` — LLM generation rules (gold should satisfy same constraints)
+- `docs/experimental_prompts.md` — formal LLM generation rules (gold should satisfy same constraints)

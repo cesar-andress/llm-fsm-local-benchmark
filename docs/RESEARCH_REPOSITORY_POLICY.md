@@ -39,7 +39,8 @@ When uncertain, **write a short organization or migration proposal** in `docs/` 
 |----------|------|-----------------|
 | Requirement dataset | `dataset/` | Yes |
 | Benchmark catalog & gold FSMs | `benchmark/` | Yes (gold: yes once approved) |
-| Prompts | `prompts/` | Yes |
+| Prompt specification | `docs/experimental_prompts.md` | Yes |
+| Local prompt runtime files | `prompts/` | No (gitignored; create locally) |
 | Experiment scripts | `scripts/` | Yes |
 | Evaluation & gold strategy docs | `docs/` | Yes |
 | Reproducibility guide | `REPRODUCIBILITY.md` | Yes |
@@ -92,7 +93,8 @@ When uncertain, **write a short organization or migration proposal** in `docs/` 
 
 ### Always track
 
-- `dataset/`, `prompts/`, `scripts/`, `benchmark/` (except empty gold placeholders are tracked until replaced)
+- `dataset/`, `scripts/`, `benchmark/` (except empty gold placeholders are tracked until replaced)
+- `docs/experimental_prompts.md`
 - `docs/evaluation_protocol.md`, `docs/gold_standard_strategy.md`
 - `requirements.txt`, `run_all.sh`, `.github/workflows/validate.yml`
 

@@ -71,16 +71,22 @@ pip install -r requirements.txt
 python3.12 scripts/validate_integrity.py
 ```
 
-This checks:
+## 5. Local prompt setup (required)
 
-- JSON syntax of all `dataset/systems/*.json`
-- Requirement numbering (R1…Rn)
-- `dataset/index.json` catalog consistency
-- `benchmark/gold/*.json` placeholders match all systems
+Prompt working files are not version controlled. Create them from the formal specification:
+
+```bash
+mkdir -p prompts
+# Copy templates from docs/experimental_prompts.md into:
+#   prompts/fsm_system_prompt.txt
+#   prompts/fsm_user_prompt.txt
+```
+
+See `docs/experimental_prompts.md` for exact template text.
 
 ---
 
-## 5. Full experiment pipeline
+## 6. Full experiment pipeline
 
 ### Option A — one command
 
@@ -123,7 +129,7 @@ python3.12 scripts/run_experiment.py \
 
 ---
 
-## 6. Expected outputs
+## 7. Expected outputs
 
 | Path | Description | Regeneratable |
 |------|-------------|---------------|
@@ -137,7 +143,7 @@ python3.12 scripts/run_experiment.py \
 
 ---
 
-## 7. Experiment configuration
+## 8. Experiment configuration
 
 Key parameters in `scripts/fsm_benchmark/config.py`:
 
@@ -147,10 +153,10 @@ OLLAMA_NUM_CTX = 8192
 OLLAMA_TIMEOUT_SECONDS = 600
 ```
 
-Prompts (fixed, version-controlled):
+Prompt templates (formal specification):
 
-- `prompts/fsm_system_prompt.txt`
-- `prompts/fsm_user_prompt.txt`
+- `docs/experimental_prompts.md` (version controlled)
+- Local runtime: `prompts/fsm_system_prompt.txt`, `prompts/fsm_user_prompt.txt` (gitignored)
 
 Disable structured output (ablation for RQ4):
 
@@ -160,7 +166,7 @@ python3.12 scripts/run_experiment.py --no-structured-output
 
 ---
 
-## 8. Provenance to record
+## 9. Provenance to record
 
 When publishing results, archive the following with your paper:
 
@@ -175,7 +181,7 @@ When publishing results, archive the following with your paper:
 
 ---
 
-## 9. Gold standard comparison (future)
+## 10. Gold standard comparison (future)
 
 When gold FSMs in `benchmark/gold/` are approved (`metadata.status = "approved"`):
 
@@ -187,7 +193,7 @@ See `docs/gold_standard_strategy.md` for methodology.
 
 ---
 
-## 10. Continuous integration
+## 11. Continuous integration
 
 GitHub Actions workflow `.github/workflows/validate.yml` runs on push/PR:
 
@@ -197,7 +203,7 @@ GitHub Actions workflow `.github/workflows/validate.yml` runs on push/PR:
 
 ---
 
-## 11. Troubleshooting
+## 12. Troubleshooting
 
 | Problem | Solution |
 |---------|----------|
@@ -209,16 +215,18 @@ GitHub Actions workflow `.github/workflows/validate.yml` runs on push/PR:
 
 ---
 
-## 12. Related documents
+## 13. Related documents
 
 - `README.md` — project overview
 - `docs/evaluation_protocol.md` — research questions and metrics
+- `docs/experimental_prompts.md` — formal prompt specification
+- `docs/REPOSITORY_HYGIENE_POLICY.md` — artifact hygiene policy
 - `docs/gold_standard_strategy.md` — gold FSM methodology
 - `dataset/README.md` — dataset schema and domains
 
 ---
 
-## 13. License and citation
+## 14. License and citation
 
 - License: MIT (see `LICENSE`)
 - Citation: see `CITATION.cff`

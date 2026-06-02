@@ -49,7 +49,7 @@
 |----------|-------------|
 | Temperature | 0.0 |
 | Context length (`num_ctx`) | 8192 |
-| Prompt templates | `prompts/fsm_system_prompt.txt`, `prompts/fsm_user_prompt.txt` |
+| Prompt templates | `docs/experimental_prompts.md` (local `prompts/` derived at runtime) |
 | Inference backend | Ollama local API |
 | FSM output schema | Pydantic `FSMOutput` JSON schema |
 
@@ -148,7 +148,7 @@ Compare A1 vs A2 on `invalid_json_rate` and `requirement_coverage` (RQ4).
 
 | Threat | Mitigation |
 |--------|------------|
-| Prompt sensitivity | Fixed prompts versioned in `prompts/`; document prompt hash in manifest |
+| Prompt sensitivity | Fixed templates in `docs/experimental_prompts.md`; document local prompt hash in manifest |
 | Temperature stochasticity | Temperature = 0.0 |
 | Ollama version drift | Record `ollama --version` and model digests in `results/manifest_*.json` |
 | Single run per condition | Optional: k=3 runs for variance estimation on subset |
