@@ -1,9 +1,25 @@
 # Repository Hygiene Audit
 
 **Date:** 2026-06-02  
+**Verification pass:** 2026-06-02 (re-applied and confirmed)  
 **Repository:** `~/papers/ist2026/llm-fsm-local-benchmark`  
 **Policy:** `docs/REPOSITORY_HYGIENE_POLICY.md`  
-**Commit target:** `chore(repo): enforce research artifact hygiene policy`
+**Tracked files:** 78  
+**Commit:** `chore(repo): enforce research artifact hygiene policy`
+
+---
+
+## 0. Verification status (current)
+
+| Check | Result |
+|-------|--------|
+| `prompts/` in Git index | **Absent** ✓ |
+| `prompts/` on disk (local) | **Present** ✓ (`fsm_system_prompt.txt`, `fsm_user_prompt.txt`) |
+| `.gitignore` AI patterns | **Present** ✓ |
+| `docs/experimental_prompts.md` | **Tracked** ✓ |
+| Operational IDE/agent files tracked | **None** ✓ |
+| `python3.12 scripts/validate_integrity.py` | **PASS** ✓ |
+| Tracked content English | **Yes** ✓ |
 
 ---
 
@@ -26,7 +42,7 @@ Applied the **AI-only artifact and prompt hygiene** policy:
 | `.gitignore` | `AGENTS.md`, `.cursor/` | **KEEP** — exclusion patterns |
 | `docs/REPOSITORY_HYGIENE_POLICY.md` | excluded path names | **KEEP** — policy enumeration |
 | `docs/PROJECT_RULES.md` | `.cursor/`, `AGENTS.md` as excluded | **KEEP** — policy enumeration |
-| `docs/language_audit.md` | Historical `Cursor`, `AGENTS.md` | **REVIEW_MANUALLY** — historical audit; superseded by this report |
+| `docs/language_audit.md` | Historical operational path names | **KEEP** — superseded; sanitized 2026-06-02 |
 | `docs/migration_report.md` | `prompts/` paths in migration plan | **KEEP** — historical; paths updated in active docs |
 | `docs/pre_migration_setup_summary.md` | `prompts/` CI note | **KEEP** — historical record |
 | `README.md` | `OpenAI` (paid API exclusion) | **KEEP** — scientific context, not workflow |

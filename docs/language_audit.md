@@ -1,6 +1,6 @@
 # Language Audit Report
 
-> **Note:** For repository hygiene (prompt tracking, operational artifacts), see `docs/repository_hygiene_audit.md`. Sections below referencing tracked `prompts/`, `AGENTS.md`, or `.cursor/` describe a prior state superseded on 2026-06-02.
+> **Note:** For repository hygiene (prompt tracking, operational artifacts), see `docs/repository_hygiene_audit.md`. Earlier versions of this report referenced paths since removed from Git tracking.
 
 **Date:** 2026-06-02  
 **Repository:** `~/papers/ist2026/llm-fsm-local-benchmark`  
@@ -54,9 +54,8 @@ Exclusions: `.git/`, `.venv/` (third-party packages may contain non-English test
 - `REPRODUCIBILITY.md`
 - `requirements.txt`
 - `run_all.sh`
-- `AGENTS.md` *(created this audit)*
 
-### 3.2 Documentation (9)
+### 3.2 Documentation (11)
 
 - `docs/PROJECT_RULES.md`
 - `docs/LANGUAGE_POLICY.md`
@@ -69,11 +68,7 @@ Exclusions: `.git/`, `.venv/` (third-party packages may contain non-English test
 - `docs/pre_migration_setup_summary.md`
 - `docs/language_audit.md` *(this file)*
 
-### 3.3 Cursor / agent rules (1)
-
-- `.cursor/rules/project-rules.mdc` *(created this audit)*
-
-### 3.4 Dataset (22)
+### 3.3 Dataset (22)
 
 - `dataset/index.json`
 - `dataset/README.md`
@@ -140,14 +135,14 @@ No additional translations were required during this audit.
 
 ---
 
-## 5. Files created or updated (this operation)
+## 5. Files created or updated (historical — 2026-06-02)
 
 | File | Action |
 |------|--------|
-| `.cursor/rules/project-rules.mdc` | Created — Cursor project rules (`alwaysApply: true`) |
-| `AGENTS.md` | Created — repository-local agent instructions |
 | `docs/language_audit.md` | Created — this report |
-| `docs/PROJECT_RULES.md` | Updated — removed named tool references from policy text |
+| `docs/PROJECT_RULES.md` | Updated — neutral policy wording |
+
+Operational IDE rule files were later removed from Git tracking; see `docs/repository_hygiene_audit.md`.
 
 ---
 
@@ -174,10 +169,9 @@ All 20 `dataset/systems/*.json` files use **English** natural-language requireme
 
 ## 7. Prompts verification
 
-| File | Language | FSM schema compliance |
-|------|----------|----------------------|
-| `prompts/fsm_system_prompt.txt` | English | ✓ |
-| `prompts/fsm_user_prompt.txt` | English | ✓ |
+Formal specification (version controlled): `docs/experimental_prompts.md` — English.
+
+Local runtime copies (gitignored): `prompts/fsm_system_prompt.txt`, `prompts/fsm_user_prompt.txt` — English, verified on disk.
 
 ---
 
@@ -195,7 +189,7 @@ All Markdown documentation under `docs/` and root `README.md`, `REPRODUCIBILITY.
 <type>(<scope>): <short summary>
 ```
 
-Documented in: `docs/PROJECT_RULES.md`, `.cursor/rules/project-rules.mdc`, `AGENTS.md`.
+Documented in: `docs/PROJECT_RULES.md`.
 
 ### 9.2 Historical commits (manual review)
 
@@ -235,11 +229,10 @@ Pre-commit staging review: no `.venv/`, `__pycache__/`, secrets, or generated ex
 
 ## 12. Conclusion
 
-The repository **meets the English-language policy** for publication-ready artifacts. Project rules are installed in:
+The repository **meets the English-language policy** for publication-ready artifacts. Authoritative policies:
 
-- `docs/PROJECT_RULES.md` (authoritative)
-- `.cursor/rules/project-rules.mdc` (Cursor IDE)
-- `AGENTS.md` (repository-local agent entry point)
+- `docs/PROJECT_RULES.md`
+- `docs/REPOSITORY_HYGIENE_POLICY.md`
 
 **Next recommended action:** push commits to GitHub and publish `v0.1.0` release when credentials are available.
 
