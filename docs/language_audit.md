@@ -33,7 +33,7 @@ These paths were inspected for Spanish user-facing content. None required transl
 
 ## 2. Inspection method
 
-1. Unicode scan for Spanish diacritics (`áéíóúñ¿¡`) across project text files.
+1. Unicode scan for Spanish diacritics and inverted punctuation marks across project text files.
 2. Keyword scan for common Spanish function words in Markdown, Python, JSON, YAML, shell, and CFF files.
 3. Manual review of prompts, requirement specifications, and documentation.
 4. Scan for prohibited tool references in user-facing documentation.
