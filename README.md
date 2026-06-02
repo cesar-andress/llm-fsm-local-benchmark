@@ -1,56 +1,57 @@
 # Local LLM FSM Benchmark (Ollama)
 
-Experimento **100 % local** para evaluar modelos open-source con [Ollama](https://ollama.com) en la generación de **máquinas de estados finitas deterministas (FSM)** a partir de requisitos en lenguaje natural.
+Fully **local** experiment for evaluating open-source models with [Ollama](https://ollama.com) on **deterministic finite state machine (FSM)** generation from natural-language requirements.
 
-No se usan APIs de pago (OpenAI, Anthropic, Google, etc.).
+No paid APIs (OpenAI, Anthropic, Google, etc.) are used.
 
-## Objetivo
+## Objective
 
-Comparar modelos locales en:
+Compare local models on:
 
-- validez JSON / cumplimiento de esquema
-- determinismo
-- cobertura de requisitos
-- transiciones no soportadas o inferidas
-- tamaño estructural de la FSM (estados, eventos, transiciones)
+- JSON validity and schema compliance
+- Determinism
+- Requirement coverage
+- Unsupported or inferred transitions
+- Structural FSM size (states, events, transitions)
 
-## Requisitos de hardware/software
+## Hardware and software requirements
 
-| Componente | Recomendado |
-|------------|-------------|
+| Component | Recommended |
+|-----------|-------------|
 | GPU | NVIDIA RTX 4090 (24 GB VRAM) |
-| Python | **3.11+** (usar `python3.12`; el `python3` del sistema puede ser 3.6) |
-| Ollama | Instalado y en ejecución (`ollama serve`) |
-| RAM | 32 GB+ recomendado para modelos 14B |
+| Python | **3.11+** (use `python3.12`; system `python3` may be older) |
+| Ollama | Installed and running (`ollama serve`) |
+| RAM | 32 GB+ recommended for 14B models |
 
-## Estructura del proyecto
+## Project structure
 
 ```text
 .
-├── dataset/              # 20 sistemas × 12–13 requisitos numerados
-├── prompts/              # Prompts y esquema FSM para Ollama
+├── dataset/              # 20 systems × 12–13 numbered requirements
+├── benchmark/            # Catalog, gold FSM placeholders
+├── prompts/              # FSM generation prompts and schema
 ├── outputs/
-│   ├── raw/              # Respuestas completas del modelo (JSON wrapper)
-│   └── cleaned/          # FSM JSON parseado y validado
+│   ├── raw/              # Full model responses (JSON wrapper)
+│   └── cleaned/          # Parsed FSM JSON
 ├── results/
-│   ├── metrics.csv       # Resumen tabular (generado)
+│   ├── metrics.csv       # Summary table (generated)
 │   ├── summary_by_model.json
-│   └── details/          # Métricas por modelo × sistema
+│   └── details/          # Per model × system metrics
 ├── scripts/
-│   ├── check_models.py   # Verifica modelos instalados en Ollama
-│   ├── run_experiment.py # Ejecuta generación FSM
-│   ├── evaluate.py       # Agrega métricas → CSV
-│   ├── plot_results.py   # Gráficos PNG + SVG
-│   └── fsm_benchmark/    # Librería interna
-├── figures/              # Gráficos exportados
-├── paper/                # Borrador del artículo
+│   ├── check_models.py   # Verify Ollama models
+│   ├── run_experiment.py # FSM generation
+│   ├── evaluate.py       # Metrics → CSV
+│   ├── plot_results.py   # PNG + SVG figures
+│   └── fsm_benchmark/    # Internal library
+├── figures/              # Exported plots
+├── docs/                 # Evaluation protocol, gold strategy, language policy
 ├── requirements.txt
-└── run_all.sh            # Pipeline reproducible completo
+└── run_all.sh            # Reproducible pipeline
 ```
 
-## Modelos evaluados
+## Models evaluated
 
-Obligatorios:
+Required:
 
 - `qwen2.5-coder:7b`
 - `qwen2.5-coder:14b`
@@ -59,46 +60,31 @@ Obligatorios:
 - `gemma2:9b`
 - `phi3:14b`
 
-Opcional (requiere más VRAM):
+Optional (higher VRAM):
 
 - `qwen2.5-coder:32b`
 
-## Reproducibilidad — inicio rápido
+## Quick start
 
-### 1. Clonar / entrar al proyecto
+### 1. Clone and enter the repository
 
 ```bash
-cd /home/cesar/papers/ist2026
+git clone git@github.com:cesar-andress/llm-fsm-local-benchmark.git
+cd llm-fsm-local-benchmark
 ```
 
-### 2. Instalar Ollama y descargar modelos
+### 2. Install Ollama and pull models
 
 ```bash
-# Instalar Ollama: https://ollama.com/download
-ollama serve   # en otra terminal si no está activo
+ollama serve   # separate terminal if not already running
 
-# Verificar e instalar modelos
 python3.12 scripts/check_models.py
-# Copia y ejecuta cada comando `ollama pull ...` que imprima
+# Run each printed `ollama pull ...` command
 
-# Con modelo opcional 32B
-python3.12 scripts/check_models.py --include-optional
+python3.12 scripts/check_models.py --include-optional   # optional 32B
 ```
 
-Comandos de instalación:
-
-```bash
-ollama pull qwen2.5-coder:7b
-ollama pull qwen2.5-coder:14b
-ollama pull llama3.1:8b
-ollama pull mistral-nemo:12b
-ollama pull gemma2:9b
-ollama pull phi3:14b
-# opcional:
-ollama pull qwen2.5-coder:32b
-```
-
-### 3. Entorno Python
+### 3. Python environment
 
 ```bash
 python3.12 -m venv .venv
@@ -106,95 +92,84 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Ejecutar todo el pipeline
+### 4. Run the full pipeline
 
 ```bash
 chmod +x run_all.sh
 ./run_all.sh
 ```
 
-Con modelo opcional 32B:
+With optional 32B model:
 
 ```bash
 INCLUDE_OPTIONAL=1 ./run_all.sh
 ```
 
-### 5. Ejecución paso a paso (manual)
+### 5. Step-by-step (manual)
 
 ```bash
 source .venv/bin/activate
-
-# 1) Comprobar modelos
 python3.12 scripts/check_models.py
-
-# 2) Generar FSMs (20 sistemas × N modelos)
 python3.12 scripts/run_experiment.py
-
-# Subconjunto para prueba rápida
-python3.12 scripts/run_experiment.py \
-  --models llama3.1:8b \
-  --systems vending_machine atm
-
-# 3) Calcular métricas
 python3.12 scripts/evaluate.py
-
-# 4) Generar figuras
 python3.12 scripts/plot_results.py
 ```
 
-## Salidas generadas
+Pilot run:
 
-| Artefacto | Descripción |
-|-----------|-------------|
-| `outputs/raw/<modelo>/<sistema>.json` | Texto crudo + metadatos (tokens, duración) |
-| `outputs/cleaned/<modelo>/<sistema>.json` | FSM JSON limpio |
-| `results/metrics.csv` | Tabla principal para el paper |
-| `results/summary_by_model.json` | Agregados por modelo |
-| `results/details/<modelo>/<sistema>.json` | Métricas detalladas |
-| `figures/*.png`, `figures/*.svg` | Gráficos |
+```bash
+python3.12 scripts/run_experiment.py \
+  --models llama3.1:8b \
+  --systems vending_machine atm
+```
 
-## Métricas
+## Outputs
 
-| Métrica | Descripción |
-|---------|-------------|
-| `num_states` | Número de estados declarados |
-| `num_events` | Número de eventos |
-| `num_transitions` | Número de transiciones |
-| `deterministic` | Sin pares `(source, event)` duplicados |
-| `requirement_coverage` | Fracción de R1…Rn citados en transiciones |
-| `unsupported_transitions` | Transiciones sin referencia válida a requisitos |
-| `inferred_transitions` | Transiciones con requirement vacío o marcado implícito |
-| `invalid_json` | No se pudo parsear/validar JSON |
-| `schema_valid` | Cumple esquema Pydantic FSM |
-| `unreachable_states` | Estados no alcanzables desde `initial_state` |
+| Artifact | Description |
+|----------|-------------|
+| `outputs/raw/<model>/<system>.json` | Raw response + metadata (tokens, duration) |
+| `outputs/cleaned/<model>/<system>.json` | Clean FSM JSON |
+| `results/metrics.csv` | Main results table |
+| `results/summary_by_model.json` | Per-model aggregates |
+| `results/details/<model>/<system>.json` | Detailed metrics |
+| `figures/*.png`, `figures/*.svg` | Plots |
 
-## Configuración del experimento
+## Metrics
 
-Parámetros en `scripts/fsm_benchmark/config.py`:
+| Metric | Description |
+|--------|-------------|
+| `num_states` | Number of declared states |
+| `num_events` | Number of events |
+| `num_transitions` | Number of transitions |
+| `deterministic` | No duplicate `(source, event)` pairs |
+| `requirement_coverage` | Fraction of R1…Rn cited in transitions |
+| `unsupported_transitions` | Transitions without valid requirement references |
+| `inferred_transitions` | Transitions with empty or implicit requirement fields |
+| `invalid_json` | JSON parse failure |
+| `schema_valid` | Passes Pydantic FSM schema |
+| `unreachable_states` | States not reachable from `initial_state` |
 
-- `OLLAMA_TEMPERATURE = 0.0` — máxima reproducibilidad
-- `OLLAMA_NUM_CTX = 8192` — contexto para requisitos largos
-- Salida estructurada: esquema JSON vía API `format` de Ollama
+## Configuration
 
-Desactivar salida estructurada (ablation):
+Key parameters in `scripts/fsm_benchmark/config.py`:
+
+- `OLLAMA_TEMPERATURE = 0.0` — reproducibility
+- `OLLAMA_NUM_CTX = 8192` — context for long requirements
+- Structured output via Ollama `format` JSON schema
+
+Ablation (disable structured output):
 
 ```bash
 python3.12 scripts/run_experiment.py --no-structured-output
 ```
 
-Continuar aunque falten modelos:
-
-```bash
-python3.12 scripts/run_experiment.py --skip-missing
-```
-
 ## Dataset
 
-20 sistemas en `dataset/systems/` (máquina expendedora, ATM, login, parking, ascensor, biblioteca, hotel, tickets, e-commerce, termostato, control de acceso, citas médicas, bici sharing, warehouse, examen online, alquiler coches, taquillas, restaurante, tren, gimnasio).
+20 systems in `dataset/systems/` covering vending machines, ATMs, login, parking gates, elevators, libraries, hotels, ticketing, e-commerce, thermostats, access control, medical booking, bike rental, warehouse inventory, online exams, car rental, package lockers, restaurants, trains, and gym membership.
 
-Ver `dataset/index.json` para el catálogo completo.
+See `dataset/index.json` for the full catalog and `docs/dataset.md` for schema details.
 
-## Esquema FSM esperado
+## Expected FSM schema
 
 ```json
 {
@@ -215,24 +190,27 @@ Ver `dataset/index.json` para el catálogo completo.
 }
 ```
 
-## Notas para RTX 4090
+## RTX 4090 notes
 
-- Ejecutar modelos de a uno; Ollama gestiona VRAM automáticamente.
-- El 32B puede requerir cuantización; usar solo si cabe en 24 GB.
-- Para reducir tiempo de pilotaje: `--systems vending_machine login_system atm`.
-- Tiempo estimado completo: ~2–6 h según modelos instalados y velocidad de inferencia.
+- Run one model at a time; Ollama manages VRAM.
+- 32B may require quantisation; use only if it fits in 24 GB.
+- Reduce pilot time: `--systems vending_machine login_system atm`.
+- Full run: approximately 2–6 hours depending on models and inference speed.
+
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| `REPRODUCIBILITY.md` | Full reproduction guide |
+| `docs/evaluation_protocol.md` | Research questions and metrics |
+| `docs/gold_standard_strategy.md` | Gold FSM methodology |
+| `docs/LANGUAGE_POLICY.md` | English-only repository policy |
+| `docs/RESEARCH_REPOSITORY_POLICY.md` | Artifact placement and paper/benchmark separation |
 
 ## Citation
 
-```bibtex
-@misc{fsm_bench_20_ollama,
-  title  = {FSM-Bench-20: Local Ollama Benchmark for LLM-Generated Deterministic FSMs},
-  author = {...},
-  year   = {2026},
-  note   = {Dataset and scripts in repository}
-}
-```
+See `CITATION.cff`. Use the Zenodo DOI when available.
 
-## Licencia
+## License
 
-Dataset y scripts: uso académico. Verificar licencias individuales de cada modelo en Ollama antes de publicar resultados.
+MIT — see `LICENSE`. Verify individual model licenses on Ollama before publishing results.
