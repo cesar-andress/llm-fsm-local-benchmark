@@ -1,5 +1,7 @@
 # Local LLM FSM Benchmark (Ollama)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20516296.svg)](https://doi.org/10.5281/zenodo.20516296)
+
 Fully **local** experiment for evaluating open-source models with [Ollama](https://ollama.com) on **deterministic finite state machine (FSM)** generation from natural-language requirements.
 
 No paid APIs (OpenAI, Anthropic, Google, etc.) are used.
@@ -213,7 +215,7 @@ See `dataset/index.json` for the full catalog and `docs/dataset.md` for schema d
 
 ## Citation
 
-See `CITATION.cff`. Use the Zenodo DOI when available.
+See `CITATION.cff`. Cite the archived release: [10.5281/zenodo.20516296](https://doi.org/10.5281/zenodo.20516296)
 
 ## License
 

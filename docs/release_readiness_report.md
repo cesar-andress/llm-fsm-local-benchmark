@@ -5,6 +5,17 @@
 
 ---
 
+## Zenodo status
+
+| Item | Status |
+|------|--------|
+| DOI assigned | **yes** — [10.5281/zenodo.20516296](https://doi.org/10.5281/zenodo.20516296) |
+| `CITATION.cff` updated | yes |
+| README badge | yes |
+| `REPRODUCIBILITY.md` updated | yes |
+
+---
+
 ## Smoke test scope
 
 - **Systems tested:** `vending_machine`, `login_system`, `atm`
@@ -86,4 +97,4 @@
 
 ---
 
-*Generated after initial pre-release smoke test. No GitHub release was created.*
+*Generated after initial pre-release smoke test. Zenodo DOI 10.5281/zenodo.20516296 added to citation metadata.*

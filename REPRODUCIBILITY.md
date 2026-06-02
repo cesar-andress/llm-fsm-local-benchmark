@@ -9,6 +9,7 @@ This document describes how to fully reproduce the local LLM FSM generation expe
 | Item | Value |
 |------|-------|
 | Benchmark | FSM-Bench-20 (20 systems, 12–13 requirements each) |
+| Archived release (Zenodo) | [10.5281/zenodo.20516296](https://doi.org/10.5281/zenodo.20516296) |
 | Models | 6 mandatory + 1 optional via Ollama |
 | Temperature | 0.0 |
 | Structured output | Ollama JSON schema (`format`) enabled by default |
@@ -230,6 +231,9 @@ GitHub Actions workflow `.github/workflows/validate.yml` runs on push/PR:
 
 - License: MIT (see `LICENSE`)
 - Citation: see `CITATION.cff`
+- Archived release DOI: [10.5281/zenodo.20516296](https://doi.org/10.5281/zenodo.20516296)
+
+When reporting reproduced experiments, cite the Zenodo DOI above to reference the versioned artifact snapshot.
 
 ```bash
 # Generate BibTeX from CITATION.cff (optional)

@@ -7,6 +7,7 @@ authors:
     given-names: Cesar
 repository-code: "https://github.com/cesar-andress/llm-fsm-local-benchmark"
 url: "https://github.com/cesar-andress/llm-fsm-local-benchmark"
+doi: 10.5281/zenodo.20516296
 license: MIT
 version: 0.1.0
 date-released: 2026-06-02
