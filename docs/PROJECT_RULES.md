@@ -1,0 +1,206 @@
+# Project Rules — Language, Repository, and Commits
+
+Authoritative policy for the **LLM-FSM Local Benchmark** research artifact repository.
+
+Related documents:
+
+- `docs/LANGUAGE_POLICY.md` — language scope (summary)
+- `docs/RESEARCH_REPOSITORY_POLICY.md` — artifact placement (summary)
+- `REPRODUCIBILITY.md` — replication procedure
+
+---
+
+## 1. Mandatory language policy
+
+This is an academic research project intended for international publication.
+
+**All repository content must be written in professional academic English.**
+
+This includes:
+
+- README files
+- Documentation
+- Prompts
+- Benchmark descriptions
+- Dataset descriptions
+- Requirement specifications
+- JSON metadata
+- CSV headers
+- Figure titles
+- Plot labels
+- Tables
+- Source code comments
+- Generated reports
+- GitHub release notes
+- Commit messages
+- Issue templates
+- Pull request templates
+- LaTeX sources (if any are ever stored here — prefer `~/papers/ist2026/paper/`)
+- Paper notes intended for repository storage
+
+Do **not** write Spanish text in repository files unless explicitly requested for external communication **outside** the repository.
+
+---
+
+## 2. Translation requirement
+
+Before adding, modifying, or committing any file in:
+
+`~/papers/ist2026/llm-fsm-local-benchmark`
+
+you must check whether the file contains Spanish text.
+
+If Spanish text exists:
+
+1. Translate it into professional academic English.
+2. Preserve the scientific meaning.
+3. Preserve file structure and machine-readable formats.
+4. Do not remove technical information.
+5. Report which files were translated.
+
+This applies to all existing files and all future files.
+
+---
+
+## 3. Repository separation
+
+### Research artifact repository
+
+`~/papers/ist2026/llm-fsm-local-benchmark`
+
+This repository may contain:
+
+- Dataset
+- Benchmark definitions
+- Prompts
+- Scripts
+- Reproducibility documentation
+- Evaluation protocol
+- Gold standards
+- Selected baseline results (release snapshots)
+- Selected baseline figures (release snapshots)
+- GitHub release documentation
+
+### Paper source directory
+
+`~/papers/ist2026/paper`
+
+This directory may contain:
+
+- LaTeX files
+- Paper sections
+- `references.bib`
+- Publication figures
+- Publication tables
+
+**Do not** place paper-only LaTeX source files inside `llm-fsm-local-benchmark`.
+
+**Do not** place raw experimental outputs inside `paper/`.
+
+When uncertain about placement, write a proposal in `docs/` and wait for approval before moving files.
+
+---
+
+## 4. Commit policy
+
+Whenever changes are made inside:
+
+`~/papers/ist2026/llm-fsm-local-benchmark`
+
+create a Git commit after the changes are validated.
+
+Do **not** mention Cursor, AI assistants, ChatGPT, or any tool name in commit messages.
+
+All commit messages must be written in **English**.
+
+Use this exact Conventional Commits format:
+
+```text
+<type>(<scope>): <short summary>
+```
+
+### Allowed types
+
+| Type | Use |
+|------|-----|
+| `feat` | New capability |
+| `fix` | Bug fix |
+| `docs` | Documentation only |
+| `data` | Dataset or benchmark data |
+| `experiment` | Experiment configuration or runs |
+| `eval` | Evaluation metrics or analysis |
+| `refactor` | Code restructuring |
+| `test` | Tests |
+| `chore` | Maintenance |
+| `release` | Release preparation |
+
+### Allowed scopes
+
+`dataset` · `benchmark` · `prompts` · `scripts` · `docs` · `results` · `figures` · `ci` · `repo` · `release`
+
+### Examples
+
+```text
+data(dataset): add initial benchmark systems
+docs(repo): add reproducibility instructions
+feat(scripts): implement local Ollama execution pipeline
+eval(results): add baseline metric summary
+chore(repo): configure repository ignore rules
+release(release): prepare initial dataset release
+```
+
+---
+
+## 5. Commit workflow
+
+Before every commit:
+
+1. Run repository validation if available (`python3.12 scripts/validate_integrity.py`).
+2. Check Git status.
+3. Ensure no virtual environments, cache files, local logs, secrets, or temporary files are staged.
+4. Ensure all user-facing content is in English.
+5. Ensure the commit message follows the required format.
+
+### Never commit
+
+- `.venv/`
+- `__pycache__/`
+- `*.pyc`
+- `.env`
+- Secrets
+- Temporary logs
+- Editor backup files
+- Large local model files
+
+---
+
+## 6. GitHub and Zenodo readiness
+
+Before a GitHub release:
+
+1. Confirm `README.md` is in English.
+2. Confirm `LICENSE` exists.
+3. Confirm `CITATION.cff` exists.
+4. Confirm `REPRODUCIBILITY.md` exists.
+5. Confirm the dataset is valid (`scripts/validate_integrity.py`).
+6. Confirm scripts can be executed locally.
+7. Confirm release notes are written in English.
+8. Do **not** mention Cursor, ChatGPT, or internal assistance tools in release notes.
+
+---
+
+## 7. Reporting requirement
+
+After each substantial repository operation, provide a short report containing:
+
+- Files changed
+- Files translated
+- Validation performed
+- Commit hash
+- Next recommended action
+
+---
+
+## 8. Priority
+
+These rules take precedence over convenience, localization defaults, or undocumented repository layout changes.

@@ -1,5 +1,7 @@
 # Language Policy
 
+> **Authoritative rules:** see `docs/PROJECT_RULES.md` (Sections 1–2).
+
 This repository is an academic research project intended for international publication.
 
 **All project artifacts MUST be written in English.**

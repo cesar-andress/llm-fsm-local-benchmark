@@ -204,8 +204,9 @@ See `dataset/index.json` for the full catalog and `docs/dataset.md` for schema d
 | `REPRODUCIBILITY.md` | Full reproduction guide |
 | `docs/evaluation_protocol.md` | Research questions and metrics |
 | `docs/gold_standard_strategy.md` | Gold FSM methodology |
-| `docs/LANGUAGE_POLICY.md` | English-only repository policy |
-| `docs/RESEARCH_REPOSITORY_POLICY.md` | Artifact placement and paper/benchmark separation |
+| `docs/PROJECT_RULES.md` | Language, repository separation, commits, releases |
+| `docs/LANGUAGE_POLICY.md` | English-only policy (summary) |
+| `docs/RESEARCH_REPOSITORY_POLICY.md` | Artifact placement (summary) |
 
 ## Citation
 
