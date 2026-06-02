@@ -191,14 +191,19 @@ Before every commit:
 
 Before a GitHub release:
 
-1. Confirm `README.md` is in English.
-2. Confirm `LICENSE` exists.
-3. Confirm `CITATION.cff` exists.
-4. Confirm `REPRODUCIBILITY.md` exists.
-5. Confirm the dataset is valid (`scripts/validate_integrity.py`).
-6. Confirm scripts can be executed locally.
-7. Confirm release notes are written in English.
-8. Do **not** mention internal development tools or automated assistants in release notes.
+1. Run the **repository-wide language audit** (mandatory):
+   ```bash
+   ./scripts/audit_release_language.sh vX.Y.Z
+   ```
+   Commit `docs/release_language_audit_vX.Y.Z.md` when the audit passes.
+2. Confirm `README.md` is in English.
+3. Confirm `LICENSE` exists.
+4. Confirm `CITATION.cff` exists.
+5. Confirm `REPRODUCIBILITY.md` exists.
+6. Confirm the dataset is valid (`scripts/validate_integrity.py`).
+7. Confirm scripts can be executed locally.
+8. Confirm release notes are written in English.
+9. Do **not** mention internal development tools or automated assistants in release notes.
 
 ---
 

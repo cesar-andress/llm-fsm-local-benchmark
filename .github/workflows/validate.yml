@@ -26,6 +26,9 @@ jobs:
       - name: Validate JSON syntax, dataset, and benchmark
         run: python scripts/validate_integrity.py
 
+      - name: Validate English-only tracked files
+        run: python scripts/validate_language.py --scope tracked
+
       - name: Validate experimental prompt specification exists
         run: test -f docs/experimental_prompts.md
 
