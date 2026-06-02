@@ -7,6 +7,12 @@ Related documents:
 - `docs/LANGUAGE_POLICY.md` — language scope (summary)
 - `docs/RESEARCH_REPOSITORY_POLICY.md` — artifact placement (summary)
 - `REPRODUCIBILITY.md` — replication procedure
+- `docs/language_audit.md` — English compliance audit
+
+IDE integration:
+
+- `.cursor/rules/project-rules.mdc` — Cursor always-on rules
+- `AGENTS.md` — repository-local agent instructions
 
 ---
 
@@ -109,7 +115,7 @@ Whenever changes are made inside:
 
 create a Git commit after the changes are validated.
 
-Do **not** mention Cursor, AI assistants, ChatGPT, or any tool name in commit messages.
+Do **not** mention internal development tools or automated assistants in commit messages.
 
 All commit messages must be written in **English**.
 
@@ -185,7 +191,7 @@ Before a GitHub release:
 5. Confirm the dataset is valid (`scripts/validate_integrity.py`).
 6. Confirm scripts can be executed locally.
 7. Confirm release notes are written in English.
-8. Do **not** mention Cursor, ChatGPT, or internal assistance tools in release notes.
+8. Do **not** mention internal development tools or automated assistants in release notes.
 
 ---
 
