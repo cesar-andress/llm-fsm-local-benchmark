@@ -9,7 +9,10 @@ This document describes how to fully reproduce the local LLM FSM generation expe
 | Item | Value |
 |------|-------|
 | Benchmark | FSM-Bench-20 (20 systems, 12–13 requirements each) |
-| Archived release (Zenodo) | [10.5281/zenodo.20516296](https://doi.org/10.5281/zenodo.20516296) |
+| Publication release | **v1.0.0** (git tag) |
+| Campaign manifest | `20260602T195520Z` (finalized 2026-06-02T21:02:56 UTC) |
+| Campaign size | 140/140 runs (7 models × 20 systems) |
+| Archived artifact (Zenodo) | [10.5281/zenodo.20516296](https://doi.org/10.5281/zenodo.20516296) |
 | Models | 6 mandatory + 1 optional via Ollama |
 | Temperature | 0.0 |
 | Structured output | Ollama JSON schema (`format`) enabled by default |

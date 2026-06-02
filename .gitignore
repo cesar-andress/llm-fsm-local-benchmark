@@ -17,6 +17,9 @@ outputs/cleaned/
 results/
 figures/
 
+# Benchmark figures are intermediate/diagnostic only (smoke tests, exploratory plots).
+# Publication-ready exports belong in ~/papers/ist2026/paper/figures/ (see paper/figures/FIGURES.md).
+
 # Keep directory structure
 !outputs/raw/.gitkeep
 !outputs/cleaned/.gitkeep

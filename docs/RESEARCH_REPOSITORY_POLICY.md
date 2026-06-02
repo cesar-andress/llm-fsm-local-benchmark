@@ -49,7 +49,7 @@ When uncertain, **write a short organization or migration proposal** in `docs/` 
 | Raw LLM outputs | `outputs/raw/` | No (regeneratable) |
 | Cleaned FSM JSON | `outputs/cleaned/` | No (regeneratable) |
 | Metrics & aggregates | `results/` | Optional snapshot per release |
-| Diagnostic plots | `figures/` | No (regeneratable) |
+| Diagnostic plots | `figures/` | No (regeneratable; gitignored — use `paper/figures/` for publication) |
 
 **Must NOT be placed here:**
 
@@ -67,7 +67,7 @@ When uncertain, **write a short organization or migration proposal** in `docs/` 
 | Main manuscript | `main.tex` |
 | Bibliography | `references.bib` |
 | Sections | `sections/` |
-| Publication figures | `figures/` (copied or exported from experiment) |
+| Publication figures | `figures/` (whitelist; see `figures/FIGURES.md`) |
 | LaTeX tables | `tables/` (e.g. `metrics.tex` generated from CSV) |
 
 **Must NOT be placed there:**
