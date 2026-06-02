@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "FSM-Bench-20: Local LLM Benchmark for Deterministic FSM Generation"
+message: "If you use this benchmark or experiment pipeline, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: Andres
+    given-names: Cesar
+repository-code: "https://github.com/cesar-andress/llm-fsm-local-benchmark"
+url: "https://github.com/cesar-andress/llm-fsm-local-benchmark"
+license: MIT
+version: 0.1.0
+date-released: 2026-06-02
+keywords:
+  - finite state machines
+  - model-based testing
+  - large language models
+  - formal methods
+  - software engineering benchmark
+  - Ollama
+abstract: >
+  FSM-Bench-20 is a reproducible benchmark of 20 natural-language requirement
+  specifications for evaluating open-source LLMs on deterministic finite state
+  machine generation. The artifact includes datasets, prompts, local Ollama
+  experiment scripts, evaluation metrics, and gold-standard FSM placeholders.

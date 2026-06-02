@@ -1,0 +1,58 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Experiment outputs (regeneratable)
+outputs/raw/
+outputs/cleaned/
+results/
+figures/
+
+# Keep directory structure
+!outputs/raw/.gitkeep
+!outputs/cleaned/.gitkeep
+!figures/.gitkeep
+
+# Environment and secrets
+.env
+.env.*
+*.secret
+*.key
+
+# OS / editors
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# LaTeX build artifacts (if copied into repo)
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Large local artefacts
+*.gguf
+*.bin
+*.safetensors
