@@ -3,7 +3,7 @@ title: "FSM-Bench-20: Local LLM Benchmark for Deterministic FSM Generation"
 message: "If you use this benchmark or experiment pipeline, please cite it using the metadata below."
 type: software
 authors:
-  - family-names: Andres
+  - family-names: "Andres Sanchez"
     given-names: Cesar
     orcid: "https://orcid.org/0009-0001-8968-3404"
 repository-code: "https://github.com/cesar-andress/llm-fsm-local-benchmark"
@@ -11,9 +11,10 @@ url: "https://github.com/cesar-andress/llm-fsm-local-benchmark"
 doi: 10.5281/zenodo.20516296
 license: MIT
 version: 1.0.0
-date-released: 2026-06-02
+date-released: 2026-07-28
 keywords:
   - finite state machines
+  - guard-aware determinism
   - model-based testing
   - large language models
   - requirements engineering
@@ -22,8 +23,9 @@ keywords:
   - reproducible benchmark
 abstract: >
   FSM-Bench-20 is a reproducible benchmark of 20 natural-language requirement
-  specifications for evaluating open-source LLMs on deterministic finite state
-  machine generation under local Ollama inference. The artifact includes the
-  dataset, prompt specification, FSM JSON schema, evaluation scripts, and a
-  completed 140-run campaign freeze (manifest 20260602T195520Z) with headline
-  nested gate rates G1 98.6%, G2 78.6%, and G3 31.4%.
+  specifications for evaluating open-weight LLMs on guarded finite-state machine
+  generation under local Ollama inference. The artifact includes the dataset,
+  prompt specification, FSM JSON schema, evaluation scripts with conservative
+  guard-aware determinism (M0–M3), and a completed 140-run campaign freeze
+  (manifest 20260602T195520Z) with nested rates G1 98.6%, G2 78.6%, M0 31.4%,
+  and M1 33.6%.

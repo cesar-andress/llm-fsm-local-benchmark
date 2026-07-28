@@ -1,0 +1,1159 @@
+{
+  "run_id": "20260602T195520Z",
+  "host": "http://127.0.0.1:11434",
+  "models": [
+    "qwen2.5-coder:7b",
+    "qwen2.5-coder:14b",
+    "llama3.1:8b",
+    "mistral-nemo:12b",
+    "gemma2:9b",
+    "phi3:14b",
+    "qwen2.5-coder:32b"
+  ],
+  "systems": [
+    "access_control",
+    "atm",
+    "bike_rental",
+    "car_rental",
+    "ecommerce_checkout",
+    "elevator",
+    "gym_membership",
+    "hotel_booking",
+    "library_loan",
+    "login_system",
+    "medical_appointment_booking",
+    "online_examination",
+    "package_locker",
+    "parking_gate",
+    "restaurant_reservation",
+    "smart_thermostat",
+    "ticket_machine",
+    "train_ticket_booking",
+    "vending_machine",
+    "warehouse_inventory"
+  ],
+  "structured_output": true,
+  "started_at": "20260602T195520Z",
+  "runs": [
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "access_control",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 12.967
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "atm",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 12.214
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "bike_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 13.11
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "car_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 11.057
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "ecommerce_checkout",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 10.741
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "elevator",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 22.092
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "gym_membership",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 14.486
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "hotel_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 12.009
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "library_loan",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 14.443
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "login_system",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 14.599
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "medical_appointment_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 10.062
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "online_examination",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 18.726
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "package_locker",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 12.743
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "parking_gate",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 11.162
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "restaurant_reservation",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 13.1
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "smart_thermostat",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 18.497
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "ticket_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 11.923
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "train_ticket_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 15.574
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "vending_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 11.817
+    },
+    {
+      "model": "qwen2.5-coder:7b",
+      "system": "warehouse_inventory",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 13.656
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "access_control",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 21.664
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "atm",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 17.256
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "bike_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 15.306
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "car_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 14.016
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "ecommerce_checkout",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 15.009
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "elevator",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 18.351
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "gym_membership",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 19.917
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "hotel_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 15.689
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "library_loan",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 16.443
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "login_system",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 17.949
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "medical_appointment_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 18.02
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "online_examination",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 17.535
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "package_locker",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 18.883
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "parking_gate",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 16.301
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "restaurant_reservation",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 16.633
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "smart_thermostat",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 34.288
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "ticket_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 16.849
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "train_ticket_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 21.157
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "vending_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 17.093
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "system": "warehouse_inventory",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 19.173
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "access_control",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 14.146
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "atm",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 12.046
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "bike_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 12.042
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "car_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 9.701
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "ecommerce_checkout",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 10.843
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "elevator",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 16.303
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "gym_membership",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 10.863
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "hotel_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 9.992
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "library_loan",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 11.487
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "login_system",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 11.55
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "medical_appointment_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 11.556
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "online_examination",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 14.133
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "package_locker",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 13.068
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "parking_gate",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 10.848
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "restaurant_reservation",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 12.297
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "smart_thermostat",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 19.62
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "ticket_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 10.345
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "train_ticket_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 13.087
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "vending_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 15.307
+    },
+    {
+      "model": "llama3.1:8b",
+      "system": "warehouse_inventory",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 14.404
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "access_control",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 20.555
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "atm",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 14.799
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "bike_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 15.611
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "car_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 9.884
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "ecommerce_checkout",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 11.495
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "elevator",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 13.051
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "gym_membership",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 13.344
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "hotel_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 12.654
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "library_loan",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 10.873
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "login_system",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 16.392
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "medical_appointment_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 13.537
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "online_examination",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 13.15
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "package_locker",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 13.762
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "parking_gate",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 13.092
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "restaurant_reservation",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 12.605
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "smart_thermostat",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 35.839
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "ticket_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 13.122
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "train_ticket_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 15.21
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "vending_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 14.583
+    },
+    {
+      "model": "mistral-nemo:12b",
+      "system": "warehouse_inventory",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 15.511
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "access_control",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 26.208
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "atm",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 24.236
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "bike_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 19.773
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "car_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 31.1
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "ecommerce_checkout",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 17.775
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "elevator",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 33.507
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "gym_membership",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 23.924
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "hotel_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 23.062
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "library_loan",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 20.279
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "login_system",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 22.111
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "medical_appointment_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 21.469
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "online_examination",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 26.685
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "package_locker",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 21.218
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "parking_gate",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 17.402
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "restaurant_reservation",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 20.575
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "smart_thermostat",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 56.703
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "ticket_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 22.203
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "train_ticket_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 25.217
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "vending_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 26.181
+    },
+    {
+      "model": "gemma2:9b",
+      "system": "warehouse_inventory",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 33.308
+    },
+    {
+      "model": "phi3:14b",
+      "system": "access_control",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 12.2
+    },
+    {
+      "model": "phi3:14b",
+      "system": "atm",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 11.527
+    },
+    {
+      "model": "phi3:14b",
+      "system": "bike_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 11.064
+    },
+    {
+      "model": "phi3:14b",
+      "system": "car_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 9.208
+    },
+    {
+      "model": "phi3:14b",
+      "system": "ecommerce_checkout",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 9.483
+    },
+    {
+      "model": "phi3:14b",
+      "system": "elevator",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 12.849
+    },
+    {
+      "model": "phi3:14b",
+      "system": "gym_membership",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 11.521
+    },
+    {
+      "model": "phi3:14b",
+      "system": "hotel_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 11.574
+    },
+    {
+      "model": "phi3:14b",
+      "system": "library_loan",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 8.301
+    },
+    {
+      "model": "phi3:14b",
+      "system": "login_system",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 522.471
+    },
+    {
+      "model": "phi3:14b",
+      "system": "medical_appointment_booking",
+      "status": "invalid_json",
+      "valid_json": false,
+      "schema_valid": false,
+      "duration_sec": 82.489
+    },
+    {
+      "model": "phi3:14b",
+      "system": "online_examination",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 11.32
+    },
+    {
+      "model": "phi3:14b",
+      "system": "package_locker",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 14.917
+    },
+    {
+      "model": "phi3:14b",
+      "system": "parking_gate",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 33.58
+    },
+    {
+      "model": "phi3:14b",
+      "system": "restaurant_reservation",
+      "status": "request_failed",
+      "error": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=600)",
+      "duration_sec": 600.101
+    },
+    {
+      "model": "phi3:14b",
+      "system": "smart_thermostat",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 228.663
+    },
+    {
+      "model": "phi3:14b",
+      "system": "ticket_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 20.446
+    },
+    {
+      "model": "phi3:14b",
+      "system": "train_ticket_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 41.668
+    },
+    {
+      "model": "phi3:14b",
+      "system": "vending_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 26.714
+    },
+    {
+      "model": "phi3:14b",
+      "system": "warehouse_inventory",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": false,
+      "duration_sec": 20.305
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "access_control",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 37.629
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "atm",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 29.553
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "bike_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 29.974
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "car_rental",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 23.7
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "ecommerce_checkout",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 24.354
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "elevator",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 36.495
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "gym_membership",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 33.78
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "hotel_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 32.42
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "library_loan",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 25.183
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "login_system",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 27.358
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "medical_appointment_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 27.515
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "online_examination",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 29.932
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "package_locker",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 33.093
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "parking_gate",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 31.887
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "restaurant_reservation",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 28.64
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "smart_thermostat",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 71.039
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "ticket_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 26.217
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "train_ticket_booking",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 40.91
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "vending_machine",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 29.901
+    },
+    {
+      "model": "qwen2.5-coder:32b",
+      "system": "warehouse_inventory",
+      "status": "ok",
+      "valid_json": true,
+      "schema_valid": true,
+      "duration_sec": 28.221
+    }
+  ],
+  "finished_at": "2026-06-02T21:02:56.832149+00:00"
+}

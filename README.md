@@ -28,17 +28,20 @@ The repository is the implementation companion to the IST journal submission *FS
 
 Each system specifies behaviour in English using identifiers `R1`, `R2`, … Models must emit a single JSON object conforming to the FSM schema (states, events, transitions with guards, actions, and requirement references).
 
-Evaluation uses nested quality gates:
+Evaluation uses nested quality gates and a conservative guard-aware determinism instrument:
 
-| Gate | Criterion |
+| Gate / measure | Criterion |
 |------|-----------|
 | **G1** | Valid JSON |
 | **G2** | Schema-valid FSM with referential closure |
-| **G3** | Nested determinism — unique `(source, event)` pairs among G2 passers |
+| **M0** (nested G3) | Strict structural determinism: unique `(source, event)` pairs among G2 passers |
+| **M1** | Conservative guard-aware determinism (UNKNOWN fails) |
+| **M2** | Optimistic upper bound (UNKNOWN passes; OVERLAP fails) |
+| **M3** | Unresolved conflict-group / run mass |
 
 Additional metrics include requirement citation coverage, unsupported/inferred transitions, reachability, and structural size.
 
-See `docs/evaluation_protocol.md` and `docs/dataset.md` for full definitions.
+See `docs/evaluation_protocol.md`, `docs/guard_aware_criterion_freeze.md`, and `docs/dataset.md` for full definitions.
 
 ---
 
@@ -59,10 +62,16 @@ The **publication freeze** completed **140/140** planned runs (seven models × t
 |--------|------|-------|
 | G1 — Valid JSON | 98.6% | 138/140 |
 | G2 — Schema-valid FSM | 78.6% | 110/140 |
-| G3 — Nested deterministic FSM | 31.4% | 44/140 |
+| Nested M0 (strict determinism) | 31.4% | 44/140 |
+| Nested M1 (conservative guard-aware) | 33.6% | 47/140 |
+| Nested M2 (optimistic upper bound) | 57.9% | 81/140 |
 | Mean requirement coverage | 69.2% | — |
 
-Run-level outputs (`results/`, `outputs/`, diagnostic `figures/`) are **gitignored** and regeneratable. The v1.0.0 release documents the frozen protocol and metrics; campaign artifacts will be archived on Zenodo in a versioned record associated with the article.
+Mandatory six-model grid ($n=120$): nested M0/M1/M2 = 28.3%/29.2%/53.3%.
+
+Tracked campaign artefacts under `results/` include `metrics.csv`, guard-aware summary/groups diagnostics, and the campaign manifest.
+The large per-pair CSV (`guard_aware_pairs.csv`) is distributed as a GitHub release asset because of its size.
+Raw and cleaned model outputs under `outputs/` are included in the release tag.
 
 ---
 
@@ -147,7 +156,7 @@ If you use this benchmark, cite the Zenodo record and the accompanying paper:
 
 ```bibtex
 @software{fsm_bench_20_2026,
-  author    = {S{\'a}nchez, C{\'e}sar Andr{\'e}s},
+  author    = {Andr{\'e}s S{\'a}nchez, C{\'e}sar},
   title     = {{FSM-Bench-20}: Local {LLM} Benchmark for Deterministic {FSM} Generation},
   year      = {2026},
   doi       = {10.5281/zenodo.20516296},

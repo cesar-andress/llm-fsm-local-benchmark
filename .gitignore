@@ -17,8 +17,17 @@ outputs/cleaned/
 results/
 figures/
 
+# Track compact frozen campaign artefacts required by the IST revision deposit.
+# Large per-pair CSV and raw/cleaned outputs are published as GitHub release assets.
+!results/summary_by_model.json
+!results/guard_aware_summary.json
+!results/guard_aware_groups.json
+!results/numeric_registry.json
+!results/manifest_20260602T195520Z.json
+!results/manifest_latest.json
+
 # Benchmark figures are intermediate/diagnostic only (smoke tests, exploratory plots).
-# Publication-ready exports belong in ~/papers/ist2026/paper/figures/ (see paper/figures/FIGURES.md).
+# Publication-ready exports belong in the companion paper repository.
 
 # Keep directory structure
 !outputs/raw/.gitkeep
