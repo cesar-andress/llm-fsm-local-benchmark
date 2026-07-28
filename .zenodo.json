@@ -1,6 +1,6 @@
 {
   "title": "FSM-Bench-20: Local LLM Benchmark for Deterministic FSM Generation",
-  "description": "Reproducible benchmark of 20 natural-language requirement specifications for evaluating open-weight LLMs on guarded finite-state machine generation under local Ollama inference. Includes dataset, prompts, schema, evaluator, conservative guard-aware determinism (M0–M3), frozen 140-run campaign metrics (manifest 20260602T195520Z), cleaned outputs, and per-group diagnostics.",
+  "description": "Reproducible benchmark of 20 natural-language requirement specifications for evaluating open-weight LLMs on guarded finite-state machine generation under local Ollama inference. The public replication package includes the dataset, prompt specification, schema, evaluator, conservative guard-aware determinism (M0–M3), criterion freeze, unit tests, campaign manifests, aggregate metrics summaries, and per-group diagnostics for the frozen 140-run campaign (manifest 20260602T195520Z). Full per-pair CSV records and raw/cleaned model outputs are size-excluded from the public archive.",
   "upload_type": "software",
   "access_right": "open",
   "license": "mit",

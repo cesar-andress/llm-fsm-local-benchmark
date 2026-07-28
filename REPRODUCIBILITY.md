@@ -9,10 +9,11 @@ This document describes how to fully reproduce the local LLM FSM generation expe
 | Item | Value |
 |------|-------|
 | Benchmark | FSM-Bench-20 (20 systems, 12–13 requirements each) |
-| Publication release | **v1.0.0** (git tag) |
+| Public revision artefact | **v1.1.0** (git tag; IST guard-aware deposit) |
+| Implementation freeze | **v1.0.0** (git tag; pre-guard-aware publication baseline) |
 | Campaign manifest | `20260602T195520Z` (finalized 2026-06-02T21:02:56 UTC) |
 | Campaign size | 140/140 runs (7 models × 20 systems) |
-| Archived artifact (Zenodo) | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) |
+| Zenodo family snapshot | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) (concept [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295)); use GitHub `v1.1.0` for revision contents |
 | Models | 6 mandatory + 1 optional via Ollama |
 | Temperature | 0.0 |
 | Structured output | Ollama JSON schema (`format`) enabled by default |
@@ -234,9 +235,10 @@ GitHub Actions workflow `.github/workflows/validate.yml` runs on push/PR:
 
 - License: MIT (see `LICENSE`)
 - Citation: see `CITATION.cff`
-- Archived release DOI: [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969)
+- Public revision artefact: GitHub tag [`v1.1.0`](https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0)
+- Zenodo family snapshot DOI: [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) (concept [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295))
 
-When reporting reproduced experiments, cite the Zenodo DOI above to reference the versioned artifact snapshot.
+When reporting reproduced experiments, cite the GitHub tag for the revision contents and the Zenodo DOI for the published family snapshot.
 
 ```bash
 # Generate BibTeX from CITATION.cff (optional)

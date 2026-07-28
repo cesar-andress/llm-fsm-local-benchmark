@@ -20,7 +20,8 @@ The repository is the implementation companion to the IST journal submission *FS
 | Requirements per system | 12–13 numbered, testable statements |
 | Models (campaign) | 6 mandatory + 1 optional (Ollama) |
 | Inference | Local only; temperature 0.0; structured JSON output |
-| Archived artifact | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) |
+| Public revision artefact | GitHub tag [`v1.1.0`](https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0) |
+| Zenodo family snapshot | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) (concept [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295)) |
 
 ---
 
@@ -69,9 +70,8 @@ The **publication freeze** completed **140/140** planned runs (seven models × t
 
 Mandatory six-model grid ($n=120$): nested M0/M1/M2 = 28.3%/29.2%/53.3%.
 
-Tracked campaign artefacts under `results/` include `metrics.csv`, guard-aware summary/groups diagnostics, and the campaign manifest.
-The large per-pair CSV (`guard_aware_pairs.csv`) is distributed as a GitHub release asset because of its size.
-Raw and cleaned model outputs under `outputs/` are included in the release tag.
+The public replication package under tag `v1.1.0` tracks compact campaign artefacts under `results/`: `summary_by_model.json`, `guard_aware_summary.json`, `guard_aware_groups.json` (106 conflict groups), `numeric_registry.json`, and the frozen campaign manifests.
+Full per-pair CSV records (`metrics.csv`, `guard_aware_pairs.csv`) and raw/cleaned model outputs under `outputs/` remain with the frozen local campaign and are size-excluded from the Git tree.
 
 ---
 
@@ -196,13 +196,14 @@ This tag marks the first archival-quality release of the benchmark **implementat
 | Reproducibility guide | `REPRODUCIBILITY.md` |
 | Evaluation protocol | `docs/evaluation_protocol.md` |
 
-**Not included in git** (regeneratable; excluded by `.gitignore`):
+**Not included in the public Git tree** (size-excluded / regeneratable; see `.gitignore`):
 
-- `results/` — campaign metrics and per-run details
-- `outputs/` — raw and cleaned model JSON
-- `figures/` — diagnostic plots
+- `results/metrics.csv`, `results/guard_aware_pairs.csv`, and `results/details/` — full per-pair and per-run records
+- `outputs/raw/`, `outputs/cleaned/` — raw and cleaned model JSON
+- `figures/` — intermediate diagnostic plots (publication figures ship with the manuscript artefact)
 
-Campaign outputs for the 140-run freeze will be published in a versioned Zenodo record associated with the article. The frozen metrics in this README match manifest `20260602T195520Z`.
+The frozen headline rates in this README match manifest `20260602T195520Z`.
+Readers should use GitHub tag `v1.1.0` for the revision contents; Zenodo DOI `10.5281/zenodo.20517969` is the published family snapshot and is not claimed to contain the guard-aware revision files.
 
 ---
 

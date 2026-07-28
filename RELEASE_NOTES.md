@@ -89,7 +89,7 @@ These values are descriptive aggregates from the frozen campaign. They are repor
 4. Execute `./run_all.sh` or the documented manual steps.
 5. Compare `results/metrics.csv` gate rates against the statistics above.
 
-**Note:** `results/`, `outputs/raw/`, `outputs/cleaned/`, and `figures/` are excluded from git. Regenerate locally or download the archived campaign bundle from Zenodo when published.
+**Note:** Full per-pair CSV records, raw/cleaned model outputs, and intermediate figures are size-excluded from the public Git tree. Compact summaries and guard-aware group diagnostics are tracked under tag `v1.1.0`.
 
 ---
 
@@ -140,6 +140,8 @@ Metadata is available in `CITATION.cff`.
 
 ## Zenodo
 
-Permanent artifact DOI: **10.5281/zenodo.20517969**
+Published Zenodo version DOI: **10.5281/zenodo.20517969** (concept DOI **10.5281/zenodo.20516295**).
 
-The v1.0.0 git tag corresponds to the publication benchmark implementation. Campaign metrics, raw/cleaned outputs, and publication figures will be archived in a **versioned Zenodo record** associated with the journal article.
+That Zenodo record archives a public snapshot of the artefact family aligned with the v1.0.0-era deposit.
+Readers should use GitHub tag **`v1.1.0`** for the IST revision contents (guard-aware instrument and deposited diagnostics).
+The public archive does not claim to include full per-pair CSV records or raw/cleaned model outputs.

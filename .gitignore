@@ -18,7 +18,8 @@ results/
 figures/
 
 # Track compact frozen campaign artefacts required by the IST revision deposit.
-# Large per-pair CSV and raw/cleaned outputs are published as GitHub release assets.
+# Large per-pair CSV and raw/cleaned outputs remain with the frozen local campaign
+# (size-excluded from the public Git tree).
 !results/summary_by_model.json
 !results/guard_aware_summary.json
 !results/guard_aware_groups.json

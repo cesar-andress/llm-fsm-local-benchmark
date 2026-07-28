@@ -26,8 +26,11 @@ keywords:
 abstract: >
   FSM-Bench-20 is a reproducible benchmark of 20 natural-language requirement
   specifications for evaluating open-weight LLMs on guarded finite-state machine
-  generation under local Ollama inference. The artifact includes the dataset,
-  prompt specification, FSM JSON schema, evaluation scripts with conservative
-  guard-aware determinism (M0–M3), and a completed 140-run campaign freeze
-  (manifest 20260602T195520Z) with nested rates G1 98.6%, G2 78.6%, M0 31.4%,
-  and M1 33.6%.
+  generation under local Ollama inference. The public replication package
+  includes the dataset, prompt specification, FSM JSON schema, evaluation
+  scripts with conservative guard-aware determinism (M0–M3), criterion freeze,
+  unit tests, campaign manifests, aggregate metrics summaries, and per-group
+  diagnostics for the 140-run campaign freeze (manifest 20260602T195520Z;
+  nested rates G1 98.6%, G2 78.6%, M0 31.4%, M1 33.6%). Full per-pair CSV
+  records and raw/cleaned model outputs are size-excluded from the public
+  archive.
