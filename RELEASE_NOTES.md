@@ -108,7 +108,7 @@ These values are descriptive aggregates from the frozen campaign. They are repor
 
 Please cite:
 
-- **Zenodo:** [10.5281/zenodo.20516296](https://doi.org/10.5281/zenodo.20516296)
+- **Zenodo:** [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969)
 - **Repository:** `https://github.com/cesar-andress/llm-fsm-local-benchmark`
 - **Release tag:** `v1.0.0`
 
@@ -120,8 +120,8 @@ Metadata is available in `CITATION.cff`.
   title     = {{FSM-Bench-20}: Local {LLM} Benchmark for Deterministic {FSM} Generation},
   version   = {1.0.0},
   year      = {2026},
-  doi       = {10.5281/zenodo.20516296},
-  url       = {https://doi.org/10.5281/zenodo.20516296}
+  doi       = {10.5281/zenodo.20517969},
+  url       = {https://doi.org/10.5281/zenodo.20517969}
 }
 ```
 
@@ -140,6 +140,6 @@ Metadata is available in `CITATION.cff`.
 
 ## Zenodo
 
-Permanent artifact DOI: **10.5281/zenodo.20516296**
+Permanent artifact DOI: **10.5281/zenodo.20517969**
 
 The v1.0.0 git tag corresponds to the publication benchmark implementation. Campaign metrics, raw/cleaned outputs, and publication figures will be archived in a **versioned Zenodo record** associated with the journal article.

@@ -1,6 +1,6 @@
 # FSM-Bench-20 — Local LLM FSM Benchmark
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20516296.svg)](https://doi.org/10.5281/zenodo.20516296)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20517969.svg)](https://doi.org/10.5281/zenodo.20517969)
 
 Reproducible benchmark for evaluating **open-source large language models** on **deterministic finite state machine (FSM)** generation from natural-language requirements using local [Ollama](https://ollama.com) inference.
 
@@ -20,7 +20,7 @@ The repository is the implementation companion to the IST journal submission *FS
 | Requirements per system | 12–13 numbered, testable statements |
 | Models (campaign) | 6 mandatory + 1 optional (Ollama) |
 | Inference | Local only; temperature 0.0; structured JSON output |
-| Archived artifact | [10.5281/zenodo.20516296](https://doi.org/10.5281/zenodo.20516296) |
+| Archived artifact | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) |
 
 ---
 
@@ -151,7 +151,7 @@ python3.12 scripts/run_experiment.py \
 
 If you use this benchmark, cite the Zenodo record and the accompanying paper:
 
-- **DOI:** [10.5281/zenodo.20516296](https://doi.org/10.5281/zenodo.20516296)
+- **DOI:** [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969)
 - **Metadata:** [`CITATION.cff`](CITATION.cff)
 
 ```bibtex
@@ -159,8 +159,8 @@ If you use this benchmark, cite the Zenodo record and the accompanying paper:
   author    = {Andr{\'e}s, C{\'e}sar},
   title     = {{FSM-Bench-20}: Local {LLM} Benchmark for Deterministic {FSM} Generation},
   year      = {2026},
-  doi       = {10.5281/zenodo.20516296},
-  url       = {https://doi.org/10.5281/zenodo.20516296}
+  doi       = {10.5281/zenodo.20517969},
+  url       = {https://doi.org/10.5281/zenodo.20517969}
 }
 ```
 

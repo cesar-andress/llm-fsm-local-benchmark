@@ -12,7 +12,7 @@ This document describes how to fully reproduce the local LLM FSM generation expe
 | Publication release | **v1.0.0** (git tag) |
 | Campaign manifest | `20260602T195520Z` (finalized 2026-06-02T21:02:56 UTC) |
 | Campaign size | 140/140 runs (7 models × 20 systems) |
-| Archived artifact (Zenodo) | [10.5281/zenodo.20516296](https://doi.org/10.5281/zenodo.20516296) |
+| Archived artifact (Zenodo) | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) |
 | Models | 6 mandatory + 1 optional via Ollama |
 | Temperature | 0.0 |
 | Structured output | Ollama JSON schema (`format`) enabled by default |
@@ -234,7 +234,7 @@ GitHub Actions workflow `.github/workflows/validate.yml` runs on push/PR:
 
 - License: MIT (see `LICENSE`)
 - Citation: see `CITATION.cff`
-- Archived release DOI: [10.5281/zenodo.20516296](https://doi.org/10.5281/zenodo.20516296)
+- Archived release DOI: [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969)
 
 When reporting reproduced experiments, cite the Zenodo DOI above to reference the versioned artifact snapshot.
 
