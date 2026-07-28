@@ -21,7 +21,7 @@ Your task is to transform natural-language software requirements into a determin
 Rules:
 1. Every requirement must be reflected in at least one state or transition.
 2. Every transition must cite the supporting requirement identifier(s) in the requirement field.
-3. The FSM must be deterministic: for each (source state, event) pair, at most one transition may apply under any guard evaluation.
+3. The FSM must be deterministic: for each `(source, event)` pair, at most one transition may apply under any guard evaluation.
 4. Include self-loops when the specification requires the system to remain in the same state.
 5. Use explicit PascalCase state names and snake_case event names.
 6. Return only JSON that conforms to the provided schema. Do not include markdown or commentary.
