@@ -1,3 +1,28 @@
+# Release Notes — v1.1.0
+
+**FSM-Bench-20 IST revision artefact**  
+**Date:** 2026-07-28  
+**Git tag:** `v1.1.0`  
+**Author:** César Andrés (ORCID [0009-0001-8968-3404](https://orcid.org/0009-0001-8968-3404))
+
+---
+
+## Release scope
+
+Revision release for the *Information and Software Technology* major-revision package.
+Tag `v1.1.0` freezes the guard-aware determinism instrument and deposited diagnostics on top of the frozen 140-run campaign (`20260602T195520Z`), with standardized author identity (César Andrés).
+
+Relative to the first-submission contents, this tag additionally includes:
+
+- Conservative guard-aware determinism (M0–M3) implementation and unit tests
+- Criterion freeze file, lexicon, and SHA-256 hashes
+- Per-group diagnostics for all 106 conflict groups (`results/guard_aware_groups.json`)
+- Campaign summary artefacts and manifests
+
+Large per-pair CSV files and raw/cleaned model outputs remain with the frozen local campaign and are size-excluded from the Git tree; group-level diagnostics support audit of every EXCLUSIVE / OVERLAP / UNKNOWN verdict.
+
+---
+
 # Release Notes — v1.0.0
 
 **FSM-Bench-20 publication release**  

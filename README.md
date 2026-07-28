@@ -170,12 +170,13 @@ If you use this benchmark, cite the Zenodo record and the accompanying paper:
 
 | Version | Date | Notes |
 |---------|------|-------|
+| **v1.1.0** | 2026-07-28 | IST revision artefact — guard-aware M0–M3, diagnostics, author identity |
 | **v1.0.0** | 2026-06-02 | First publication release — 140-run campaign freeze (`20260602T195520Z`) |
 | v0.3.0 | 2026-06-02 | Repository hygiene and validation safeguards |
 | v0.2.0 | 2026-06-02 | Expanded documentation and policies |
 | v0.1.0 | 2026-06-02 | Initial public dataset and experiment framework |
 
-See [`RELEASE_NOTES.md`](RELEASE_NOTES.md) for v1.0.0 scope and artifacts.
+See [`RELEASE_NOTES.md`](RELEASE_NOTES.md) for release scope and artefacts.
 
 ---
 
