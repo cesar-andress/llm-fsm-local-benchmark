@@ -3,8 +3,9 @@ title: "FSM-Bench-20: Local LLM Benchmark for Deterministic FSM Generation"
 message: "If you use this benchmark or experiment pipeline, please cite it using the metadata below."
 type: software
 authors:
-  - family-names: Sanchez
-    given-names: Cesar Andres
+  - family-names: Andres
+    given-names: Cesar
+    orcid: "https://orcid.org/0009-0001-8968-3404"
 repository-code: "https://github.com/cesar-andress/llm-fsm-local-benchmark"
 url: "https://github.com/cesar-andress/llm-fsm-local-benchmark"
 doi: 10.5281/zenodo.20516296

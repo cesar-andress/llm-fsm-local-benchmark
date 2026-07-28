@@ -84,6 +84,18 @@ class Metrics:
     eval_count: int | None = None
     eval_duration_ns: int | None = None
     total_duration_ns: int | None = None
+    # Guard-aware extension (M0 == deterministic; M1/M2/M3 alongside)
+    m0_pass: bool = False
+    m1_pass: bool = False
+    m2_pass: bool = False
+    string_distinct_pass: bool = False
+    conflict_group_count: int = 0
+    unresolved_group_count: int = 0
+    nondeterministic_group_count: int = 0
+    resolved_group_count: int = 0
+    run_unresolved: bool = False
+    parse_ok_guards: int = 0
+    parse_total_nonempty_guards: int = 0
 
 
 def extract_requirement_refs(text: str) -> set[str]:
@@ -91,6 +103,7 @@ def extract_requirement_refs(text: str) -> set[str]:
 
 
 def compute_determinism(transitions: list[dict[str, Any]]) -> tuple[bool, int]:
+    """Strict structural determinism (M0): unique (source, event) pairs; guards ignored."""
     pairs: dict[tuple[str, str], int] = {}
     for transition in transitions:
         key = (transition.get("source", ""), transition.get("event", ""))
@@ -141,6 +154,8 @@ def compute_metrics(
     eval_duration_ns: int | None = None,
     total_duration_ns: int | None = None,
 ) -> Metrics:
+    from .guard_aware import analyze_transitions, run_result_to_metrics_fields
+
     spec_ids = requirement_ids(requirements)
     covered: set[str] = set()
 
@@ -168,6 +183,9 @@ def compute_metrics(
             eval_count=eval_count,
             eval_duration_ns=eval_duration_ns,
             total_duration_ns=total_duration_ns,
+            m0_pass=False,
+            m1_pass=False,
+            m2_pass=False,
         )
 
     states = payload.get("states", [])
@@ -177,6 +195,12 @@ def compute_metrics(
 
     deterministic, nondeterministic_pairs = compute_determinism(transitions)
     unreachable = compute_unreachable_states(states, initial_state, transitions)
+    guard_aware = analyze_transitions(
+        transitions,
+        model=model,
+        system=system_name,
+    )
+    ga_fields = run_result_to_metrics_fields(guard_aware)
 
     unsupported = 0
     inferred = 0
@@ -214,4 +238,5 @@ def compute_metrics(
         eval_count=eval_count,
         eval_duration_ns=eval_duration_ns,
         total_duration_ns=total_duration_ns,
+        **ga_fields,
     )

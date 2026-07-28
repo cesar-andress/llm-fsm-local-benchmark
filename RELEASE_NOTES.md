@@ -3,7 +3,7 @@
 **FSM-Bench-20 publication release**  
 **Date:** 2026-06-02  
 **Git tag:** `v1.0.0`  
-**Author:** Cesar Andres Sanchez
+**Author:** Cesar Andres (ORCID [0009-0001-8968-3404](https://orcid.org/0009-0001-8968-3404))
 
 ---
 
@@ -91,7 +91,7 @@ Metadata is available in `CITATION.cff`.
 
 ```bibtex
 @software{fsm_bench_20_2026,
-  author    = {S{\'a}nchez, C{\'e}sar Andr{\'e}s},
+  author    = {Andr{\'e}s, C{\'e}sar},
   title     = {{FSM-Bench-20}: Local {LLM} Benchmark for Deterministic {FSM} Generation},
   version   = {1.0.0},
   year      = {2026},
