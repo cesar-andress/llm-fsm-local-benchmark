@@ -1,6 +1,7 @@
 {
-  "title": "FSM-Bench-20: Local LLM Benchmark for Deterministic FSM Generation",
-  "description": "Reproducible benchmark of 20 natural-language requirement specifications for evaluating open-weight LLMs on guarded finite-state machine generation under local Ollama inference. GitHub tag v1.1.0 is the public replication package for the IST revision (dataset, prompt specification, schema, evaluator, guard-aware M0–M3, criterion freeze, unit tests, campaign manifests, aggregate metrics summaries, and per-group diagnostics for manifest 20260602T195520Z). Zenodo DOI 10.5281/zenodo.20517969 archives GitHub release v1.0.0 and does not contain the guard-aware revision files. Full per-pair CSV records and raw/cleaned model outputs are size-excluded from the public archive.",
+  "title": "v1.1.0 – Guard-Aware Reproducibility Release (IST Revision): FSM-Bench-20",
+  "description": "IST revision public replication package for FSM-Bench-20. Includes the dataset, prompt specification, schema, evaluator, conservative guard-aware determinism (M0–M3), criterion freeze, unit tests, campaign manifests, aggregate metrics summaries, and per-group diagnostics for all 106 conflict groups (manifest 20260602T195520Z). Full per-pair CSV records and raw/cleaned model outputs are size-excluded from the public archive.",
+  "version": "1.1.0",
   "upload_type": "software",
   "access_right": "open",
   "license": "mit",
@@ -22,10 +23,15 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/cesar-andress/llm-fsm-local-benchmark",
+      "identifier": "https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0",
       "relation": "isSupplementTo",
       "resource_type": "software",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.20516295",
+      "relation": "isVersionOf",
+      "scheme": "doi"
     }
   ]
 }

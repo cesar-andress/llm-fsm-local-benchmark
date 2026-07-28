@@ -9,11 +9,12 @@ This document describes how to fully reproduce the local LLM FSM generation expe
 | Item | Value |
 |------|-------|
 | Benchmark | FSM-Bench-20 (20 systems, 12–13 requirements each) |
-| Public revision artefact | **v1.1.0** (git tag; IST guard-aware deposit) |
+| Public replication package | **v1.1.0** — Guard-Aware Reproducibility Release (IST Revision) |
 | Implementation freeze | **v1.0.0** (git tag; pre-guard-aware publication baseline) |
 | Campaign manifest | `20260602T195520Z` (finalized 2026-06-02T21:02:56 UTC) |
 | Campaign size | 140/140 runs (7 models × 20 systems) |
-| Zenodo published deposit | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) = GitHub **`v1.0.0`** (concept [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295)); use GitHub `v1.1.0` for revision contents |
+| Zenodo published version DOI | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) (= GitHub **`v1.0.0`**) |
+| Zenodo concept DOI | [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295) |
 | Models | 6 mandatory + 1 optional via Ollama |
 | Temperature | 0.0 |
 | Structured output | Ollama JSON schema (`format`) enabled by default |
@@ -186,15 +187,9 @@ When publishing results, archive the following with your paper:
 
 ---
 
-## 10. Gold standard comparison (future)
+## 10. Gold standard comparison (not in this release)
 
-When gold FSMs in `benchmark/gold/` are approved (`metadata.status = "approved"`):
-
-```bash
-python3.12 scripts/compare_to_gold.py   # planned
-```
-
-See `docs/gold_standard_strategy.md` for methodology.
+Gold FSMs in `benchmark/gold/` remain placeholders. When approved gold FSMs are available (`metadata.status = "approved"`), comparison is documented in `docs/gold_standard_strategy.md`. The script `scripts/compare_to_gold.py` is not part of the `v1.1.0` public replication package.
 
 ---
 
@@ -235,10 +230,11 @@ GitHub Actions workflow `.github/workflows/validate.yml` runs on push/PR:
 
 - License: MIT (see `LICENSE`)
 - Citation: see `CITATION.cff`
-- Public revision artefact: GitHub tag [`v1.1.0`](https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0)
-- Zenodo published deposit DOI: [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) (= GitHub `v1.0.0`; concept [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295))
+- Public replication package: GitHub tag [`v1.1.0`](https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0)
+- Zenodo published version DOI: [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) (= GitHub `v1.0.0`)
+- Zenodo concept DOI: [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295)
 
-When reporting reproduced experiments, cite GitHub `v1.1.0` for the revision contents and the Zenodo DOI only when referring to the archived `v1.0.0` freeze.
+When reporting reproduced experiments for this revision, cite GitHub `v1.1.0`. Cite the Zenodo version DOI only when referring to the archived `v1.0.0` freeze.
 
 ```bash
 # Generate BibTeX from CITATION.cff (optional)

@@ -1,25 +1,40 @@
 # Release Notes — v1.1.0
 
-**FSM-Bench-20 IST revision artefact**  
+**v1.1.0 – Guard-Aware Reproducibility Release (IST Revision)**  
 **Date:** 2026-07-28  
 **Git tag:** `v1.1.0`  
-**Author:** César Andrés (ORCID [0009-0001-8968-3404](https://orcid.org/0009-0001-8968-3404))
+**Author:** César Andrés (ORCID [0009-0001-8968-3404](https://orcid.org/0009-0001-8968-3404))  
+**Repository:** https://github.com/cesar-andress/llm-fsm-local-benchmark
 
 ---
 
 ## Release scope
 
-Revision release for the *Information and Software Technology* major-revision package.
-Tag `v1.1.0` freezes the guard-aware determinism instrument and deposited diagnostics on top of the frozen 140-run campaign (`20260602T195520Z`), with standardized author identity (César Andrés).
+This tag is the public replication package for the *Information and Software Technology* major-revision manuscript.
+It freezes the guard-aware determinism instrument and deposited diagnostics on top of the frozen 140-run campaign (`20260602T195520Z`), with standardised author identity (César Andrés).
 
-Relative to the first-submission contents, this tag additionally includes:
+Relative to `v1.0.0`, this tag additionally includes:
 
 - Conservative guard-aware determinism (M0–M3) implementation and unit tests
 - Criterion freeze file, lexicon, and SHA-256 hashes
-- Per-group diagnostics for all 106 conflict groups (`results/guard_aware_groups.json`)
-- Campaign summary artefacts and manifests
+- Per-group guard-aware diagnostics for all 106 conflict groups (`results/guard_aware_groups.json`)
+- Aggregate metric summaries and campaign manifests
 
 Large per-pair CSV files and raw/cleaned model outputs remain with the frozen local campaign and are size-excluded from the Git tree; group-level diagnostics support audit of every EXCLUSIVE / OVERLAP / UNKNOWN verdict.
+
+---
+
+## Identifiers
+
+| Item | Value |
+|------|-------|
+| Git tag | `v1.1.0` |
+| Zenodo published version DOI | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) (= GitHub `v1.0.0` freeze) |
+| Zenodo concept DOI | [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295) |
+| GitHub Release | https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0 |
+
+The Zenodo published record `10.5281/zenodo.20517969` archives GitHub release **`v1.0.0`**.
+Readers should use GitHub tag **`v1.1.0`** for the IST revision contents (guard-aware instrument and deposited diagnostics).
 
 ---
 
@@ -46,9 +61,9 @@ The tag freezes:
 
 ---
 
-## Included artifacts (version control)
+## Included artefacts (version control)
 
-| Artifact | Path |
+| Artefact | Path |
 |----------|------|
 | Dataset index and systems | `dataset/` |
 | Gold FSM placeholders | `benchmark/` |
@@ -83,11 +98,11 @@ These values are descriptive aggregates from the frozen campaign. They are repor
 
 ## Reproducibility
 
-1. Check out tag `v1.0.0`.
+1. Check out tag `v1.0.0` for the pre-guard-aware baseline, or `v1.1.0` for the IST revision package.
 2. Follow `REPRODUCIBILITY.md` to install Ollama models and Python dependencies.
 3. Materialise prompt files from `docs/experimental_prompts.md`.
 4. Execute `./run_all.sh` or the documented manual steps.
-5. Compare `results/metrics.csv` gate rates against the statistics above.
+5. Compare regenerated gate rates against the statistics above.
 
 **Note:** Full per-pair CSV records, raw/cleaned model outputs, and intermediate figures are size-excluded from the public Git tree. Compact summaries and guard-aware group diagnostics are tracked under tag `v1.1.0`.
 
@@ -108,9 +123,9 @@ These values are descriptive aggregates from the frozen campaign. They are repor
 
 Please cite:
 
-- **Zenodo:** [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969)
+- **Revision package:** GitHub tag [`v1.1.0`](https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0)
+- **Zenodo (`v1.0.0` freeze):** [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969)
 - **Repository:** `https://github.com/cesar-andress/llm-fsm-local-benchmark`
-- **Release tag:** `v1.0.0`
 
 Metadata is available in `CITATION.cff`.
 
@@ -118,10 +133,10 @@ Metadata is available in `CITATION.cff`.
 @software{fsm_bench_20_2026,
   author    = {Andr{\'e}s, C{\'e}sar},
   title     = {{FSM-Bench-20}: Local {LLM} Benchmark for Deterministic {FSM} Generation},
-  version   = {1.0.0},
+  version   = {1.1.0},
   year      = {2026},
-  doi       = {10.5281/zenodo.20517969},
-  url       = {https://doi.org/10.5281/zenodo.20517969}
+  url       = {https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0},
+  note      = {Public replication package for the IST revision. Zenodo DOI 10.5281/zenodo.20517969 archives GitHub v1.0.0.}
 }
 ```
 
@@ -135,14 +150,3 @@ Metadata is available in `CITATION.cff`.
 | v0.2.0 | Documentation expansion |
 | v0.1.0-dataset-and-framework | Initial dataset and framework |
 | v0.1.0 | First public release |
-
----
-
-## Zenodo
-
-Published Zenodo version DOI: **10.5281/zenodo.20517969** (concept DOI **10.5281/zenodo.20516295**).
-
-That Zenodo record is titled **v1.0.0** and is linked to GitHub release **`v1.0.0` – Final benchmark freeze (140 runs)**.
-It does **not** contain the guard-aware IST revision files.
-Readers should use GitHub tag **`v1.1.0`** for the revision contents (guard-aware instrument and deposited diagnostics).
-The public archive does not claim to include full per-pair CSV records or raw/cleaned model outputs.
