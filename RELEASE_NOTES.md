@@ -142,6 +142,7 @@ Metadata is available in `CITATION.cff`.
 
 Published Zenodo version DOI: **10.5281/zenodo.20517969** (concept DOI **10.5281/zenodo.20516295**).
 
-That Zenodo record archives a public snapshot of the artefact family aligned with the v1.0.0-era deposit.
-Readers should use GitHub tag **`v1.1.0`** for the IST revision contents (guard-aware instrument and deposited diagnostics).
+That Zenodo record is titled **v1.0.0** and is linked to GitHub release **`v1.0.0` – Final benchmark freeze (140 runs)**.
+It does **not** contain the guard-aware IST revision files.
+Readers should use GitHub tag **`v1.1.0`** for the revision contents (guard-aware instrument and deposited diagnostics).
 The public archive does not claim to include full per-pair CSV records or raw/cleaned model outputs.

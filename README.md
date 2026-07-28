@@ -21,7 +21,7 @@ The repository is the implementation companion to the IST journal submission *FS
 | Models (campaign) | 6 mandatory + 1 optional (Ollama) |
 | Inference | Local only; temperature 0.0; structured JSON output |
 | Public revision artefact | GitHub tag [`v1.1.0`](https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0) |
-| Zenodo family snapshot | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) (concept [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295)) |
+| Zenodo published deposit | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) = GitHub **`v1.0.0`** (140-run freeze; concept [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295)) |
 
 ---
 
@@ -149,18 +149,21 @@ python3.12 scripts/run_experiment.py \
 
 ## Citation
 
-If you use this benchmark, cite the Zenodo record and the accompanying paper:
+If you use this benchmark, cite the accompanying paper and the public software release you actually used:
 
-- **DOI:** [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969)
+- **Revision package (this repository):** GitHub tag [`v1.1.0`](https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0)
+- **Zenodo deposit (GitHub `v1.0.0` freeze):** [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969)
 - **Metadata:** [`CITATION.cff`](CITATION.cff)
 
 ```bibtex
 @software{fsm_bench_20_2026,
   author    = {Andr{\'e}s, C{\'e}sar},
   title     = {{FSM-Bench-20}: Local {LLM} Benchmark for Deterministic {FSM} Generation},
+  version   = {1.0.0},
   year      = {2026},
   doi       = {10.5281/zenodo.20517969},
-  url       = {https://doi.org/10.5281/zenodo.20517969}
+  url       = {https://doi.org/10.5281/zenodo.20517969},
+  note      = {Zenodo record for GitHub release v1.0.0; IST revision contents under GitHub v1.1.0}
 }
 ```
 
@@ -203,7 +206,8 @@ This tag marks the first archival-quality release of the benchmark **implementat
 - `figures/` — intermediate diagnostic plots (publication figures ship with the manuscript artefact)
 
 The frozen headline rates in this README match manifest `20260602T195520Z`.
-Readers should use GitHub tag `v1.1.0` for the revision contents; Zenodo DOI `10.5281/zenodo.20517969` is the published family snapshot and is not claimed to contain the guard-aware revision files.
+Readers should use GitHub tag `v1.1.0` for the IST revision contents (guard-aware instrument and diagnostics).
+Zenodo DOI `10.5281/zenodo.20517969` is the published deposit of GitHub release **`v1.0.0`** and does not contain the guard-aware revision files.
 
 ---
 
