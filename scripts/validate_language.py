@@ -43,6 +43,43 @@ ALLOWLIST_SUBSTRINGS = (
     "Remaining Spanish content",
 )
 
+# Canonical scholarly identity (see papers/promts/author_identity_standardization.md).
+# Diacritics in these forms are author-name spelling, not Spanish prose.
+AUTHOR_IDENTITY_ALLOWLIST = (
+    "César Andrés",
+    "Andrés, César",
+    "Andrés, C.",
+    "Andrés, C.A.",
+)
+
+
+def is_allowed_line(line: str) -> bool:
+    if any(token in line for token in ALLOWLIST_SUBSTRINGS):
+        return True
+    lowered = line.lower()
+    # CITATION.cff splits the canonical name across given/family fields.
+    if ("family-names:" in lowered or "given-names:" in lowered) and any(
+        token in line for token in ("Andrés", "César")
+    ):
+        return True
+    if any(token in line for token in AUTHOR_IDENTITY_ALLOWLIST):
+        # Allow only when the line is an author-metadata / citation identity line.
+        return any(
+            key in lowered
+            for key in (
+                "author",
+                "creator",
+                "family-names",
+                "given-names",
+                "name",
+                "copyright",
+                "orcid",
+                "pdfauthor",
+                "signature",
+            )
+        ) or line.strip().startswith(("César Andrés", "Andrés,"))
+    return False
+
 
 def should_scan(path: Path) -> bool:
     if not path.is_file():
@@ -52,10 +89,6 @@ def should_scan(path: Path) -> bool:
     if any(part in SKIP_DIRS for part in path.parts):
         return False
     return path.suffix.lower() in TEXT_EXTENSIONS
-
-
-def is_allowed_line(line: str) -> bool:
-    return any(token in line for token in ALLOWLIST_SUBSTRINGS)
 
 
 def list_tracked_files(repo_root: Path) -> list[Path]:

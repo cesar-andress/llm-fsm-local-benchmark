@@ -156,7 +156,7 @@ If you use this benchmark, cite the Zenodo record and the accompanying paper:
 
 ```bibtex
 @software{fsm_bench_20_2026,
-  author    = {Andr{\'e}s S{\'a}nchez, C{\'e}sar},
+  author    = {Andr{\'e}s, C{\'e}sar},
   title     = {{FSM-Bench-20}: Local {LLM} Benchmark for Deterministic {FSM} Generation},
   year      = {2026},
   doi       = {10.5281/zenodo.20516296},

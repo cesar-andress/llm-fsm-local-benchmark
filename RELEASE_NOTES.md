@@ -3,7 +3,7 @@
 **FSM-Bench-20 publication release**  
 **Date:** 2026-06-02  
 **Git tag:** `v1.0.0`  
-**Author:** Cesar Andres (ORCID [0009-0001-8968-3404](https://orcid.org/0009-0001-8968-3404))
+**Author:** César Andrés (ORCID [0009-0001-8968-3404](https://orcid.org/0009-0001-8968-3404))
 
 ---
 
