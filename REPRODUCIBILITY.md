@@ -10,10 +10,9 @@ This document describes how to fully reproduce the local LLM FSM generation expe
 |------|-------|
 | Benchmark | FSM-Bench-20 (20 systems, 12–13 requirements each) |
 | Public replication package | **v1.1.0** — Guard-Aware Reproducibility Release (IST Revision) |
-| Implementation freeze | **v1.0.0** (git tag; pre-guard-aware publication baseline) |
 | Campaign manifest | `20260602T195520Z` (finalized 2026-06-02T21:02:56 UTC) |
 | Campaign size | 140/140 runs (7 models × 20 systems) |
-| Zenodo published version DOI | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) (= GitHub **`v1.0.0`**) |
+| Zenodo published record DOI | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) |
 | Zenodo concept DOI | [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295) |
 | Models | 6 mandatory + 1 optional via Ollama |
 | Temperature | 0.0 |
@@ -231,10 +230,10 @@ GitHub Actions workflow `.github/workflows/validate.yml` runs on push/PR:
 - License: MIT (see `LICENSE`)
 - Citation: see `CITATION.cff`
 - Public replication package: GitHub tag [`v1.1.0`](https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0)
-- Zenodo published version DOI: [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) (= GitHub `v1.0.0`)
+- Zenodo published record DOI: [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969)
 - Zenodo concept DOI: [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295)
 
-When reporting reproduced experiments for this revision, cite GitHub `v1.1.0`. Cite the Zenodo version DOI only when referring to the archived `v1.0.0` freeze.
+When reporting reproduced experiments for this revision, cite GitHub `v1.1.0` together with the Zenodo DOI above.
 
 ```bash
 # Generate BibTeX from CITATION.cff (optional)

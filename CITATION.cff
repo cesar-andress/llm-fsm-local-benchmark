@@ -14,7 +14,7 @@ doi: 10.5281/zenodo.20517969
 identifiers:
   - type: doi
     value: "10.5281/zenodo.20517969"
-    description: "Zenodo deposit corresponding to GitHub release v1.0.0 (final 140-run freeze). IST revision contents are under GitHub tag v1.1.0."
+    description: "Zenodo published record DOI for the FSM-Bench-20 artefact (concept DOI 10.5281/zenodo.20516295). Public replication package: GitHub tag v1.1.0."
 license: MIT
 version: 1.1.0
 date-released: 2026-07-28
@@ -33,10 +33,9 @@ abstract: >
   generation under local Ollama inference. GitHub tag v1.1.0 (Guard-Aware
   Reproducibility Release, IST Revision) is the public replication package:
   dataset, prompt specification, FSM JSON schema, evaluation scripts with
-  conservative guard-aware determinism (M0–M3), criterion freeze, unit tests,
+  conservative guard-aware determinism (M0-M3), criterion freeze, unit tests,
   campaign manifests, aggregate metric summaries, and per-group guard-aware
   diagnostics for the 140-run campaign freeze (manifest 20260602T195520Z;
-  nested rates G1 98.6%, G2 78.6%, M0 31.4%, M1 33.6%). Zenodo DOI
-  10.5281/zenodo.20517969 archives GitHub release v1.0.0 and does not contain
-  the guard-aware revision files. Full per-pair CSV records and raw/cleaned
-  model outputs are size-excluded from the public archive.
+  nested rates G1 98.6%, G2 78.6%, M0 31.4%, M1 33.6%). Full per-pair CSV
+  records and raw/cleaned model outputs are size-excluded from the public
+  archive.

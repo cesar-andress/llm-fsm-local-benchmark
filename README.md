@@ -21,7 +21,7 @@ The repository is the implementation companion to the IST journal submission *FS
 | Models (campaign) | 6 mandatory + 1 optional (Ollama) |
 | Inference | Local only; temperature 0.0; structured JSON output |
 | Public replication package | GitHub tag [`v1.1.0`](https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0) — *Guard-Aware Reproducibility Release (IST Revision)* |
-| Zenodo published version DOI | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) (= GitHub **`v1.0.0`** freeze) |
+| Zenodo published record DOI | [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969) |
 | Zenodo concept DOI | [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295) |
 
 ---
@@ -153,7 +153,7 @@ python3.12 scripts/run_experiment.py \
 If you use this benchmark, cite the accompanying paper and the public replication package:
 
 - **Public replication package:** GitHub tag [`v1.1.0`](https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0) (*Guard-Aware Reproducibility Release*)
-- **Zenodo published version DOI (`v1.0.0` freeze):** [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969)
+- **Zenodo published record DOI:** [10.5281/zenodo.20517969](https://doi.org/10.5281/zenodo.20517969)
 - **Zenodo concept DOI:** [10.5281/zenodo.20516295](https://doi.org/10.5281/zenodo.20516295)
 - **Metadata:** [`CITATION.cff`](CITATION.cff)
 
@@ -163,8 +163,8 @@ If you use this benchmark, cite the accompanying paper and the public replicatio
   title     = {{FSM-Bench-20}: Local {LLM} Benchmark for Deterministic {FSM} Generation},
   version   = {1.1.0},
   year      = {2026},
-  url       = {https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0},
-  note      = {Public replication package for the IST revision. Zenodo DOI 10.5281/zenodo.20517969 archives GitHub v1.0.0.}
+  doi       = {10.5281/zenodo.20517969},
+  url       = {https://github.com/cesar-andress/llm-fsm-local-benchmark/releases/tag/v1.1.0}
 }
 ```
 
@@ -175,40 +175,8 @@ If you use this benchmark, cite the accompanying paper and the public replicatio
 | Version | Date | Notes |
 |---------|------|-------|
 | **v1.1.0** | 2026-07-28 | Guard-Aware Reproducibility Release (IST Revision) |
-| **v1.0.0** | 2026-06-02 | First publication release — 140-run campaign freeze (`20260602T195520Z`) |
-| v0.3.0 | 2026-06-02 | Repository hygiene and validation safeguards |
-| v0.2.0 | 2026-06-02 | Expanded documentation and policies |
-| v0.1.0 | 2026-06-02 | Initial public dataset and experiment framework |
 
 See [`RELEASE_NOTES.md`](RELEASE_NOTES.md) for release scope and artefacts.
-
----
-
-## Release v1.0.0
-
-**FSM-Bench-20 publication release** used in the *Information and Software Technology* submission.
-
-This tag marks the first archival-quality release of the benchmark **implementation** and documentation:
-
-| Component | Location |
-|-----------|----------|
-| Benchmark dataset (20 systems) | `dataset/` |
-| Prompt specification | `docs/experimental_prompts.md` |
-| FSM JSON schema | `scripts/fsm_benchmark/schema.py` |
-| Evaluation scripts | `scripts/evaluate.py`, `scripts/fsm_benchmark/` |
-| Experiment driver | `scripts/run_experiment.py`, `run_all.sh` |
-| Reproducibility guide | `REPRODUCIBILITY.md` |
-| Evaluation protocol | `docs/evaluation_protocol.md` |
-
-**Not included in the public Git tree** (size-excluded / regeneratable; see `.gitignore`):
-
-- `results/metrics.csv`, `results/guard_aware_pairs.csv`, and `results/details/` — full per-pair and per-run records
-- `outputs/raw/`, `outputs/cleaned/` — raw and cleaned model JSON
-- `figures/` — intermediate diagnostic plots (publication figures ship with the manuscript artefact)
-
-The frozen headline rates in this README match manifest `20260602T195520Z`.
-Readers should use GitHub tag `v1.1.0` for the IST revision contents (guard-aware instrument and diagnostics).
-Zenodo DOI `10.5281/zenodo.20517969` is the published deposit of GitHub release **`v1.0.0`** and does not contain the guard-aware revision files.
 
 ---
 
@@ -217,12 +185,12 @@ Zenodo DOI `10.5281/zenodo.20517969` is the published deposit of GitHub release 
 | Document | Description |
 |----------|-------------|
 | `REPRODUCIBILITY.md` | Full reproduction guide |
-| `RELEASE_NOTES.md` | Release notes (`v1.1.0` and prior) |
+| `RELEASE_NOTES.md` | Release notes for `v1.1.0` |
 | `docs/evaluation_protocol.md` | Research questions and metrics |
 | `docs/experimental_prompts.md` | Formal prompt specification |
 | `docs/dataset.md` | Dataset schema and catalog |
 | `docs/PROJECT_RULES.md` | Repository conventions |
-| `docs/RESEARCH_REPOSITORY_POLICY.md` | Artifact placement policy |
+| `docs/RESEARCH_REPOSITORY_POLICY.md` | Artefact placement policy |
 
 ---
 
